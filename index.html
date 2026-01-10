@@ -1,0 +1,2185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيت ورد - لمواد البناء والعزل</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), 
+                              url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Dropdown Animation */
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu Animation */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        /* Scroll Animation */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hover Card Effect */
+        .hover-card {
+            transition: all 0.3s ease;
+        }
+
+        .hover-card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Overlay Menu Background */
+        .menu-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Top Bar -->
+    <div class="bg-red-700 text-white py-2 px-4">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fas fa-phone ml-2"></i> 920031414</span>
+                <span><i class="fas fa-envelope ml-2"></i> sales@baytalward.com</span>
+            </div>
+            <div class="text-center">
+                الأسرع تسليم ضمن شبكة الطرق المحلية بنسبة 15%
+            </div>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="text-2xl md:text-3xl font-bold text-red-700">
+                        بيت ورد
+                        <span class="block text-xs font-normal text-gray-600">لمواد البناء والعزل</span>
+                    </div>
+                </div>
+
+                <!-- Search Bar - Hidden on mobile -->
+                <div class="hidden md:flex flex-1 max-w-xl mx-8">
+                    <div class="relative w-full">
+                        <input 
+                            type="text" 
+                            placeholder="ابحث في المتجر (بالكامل مثل...)"
+                            class="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                        />
+                        <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-red-700 text-white px-4 py-1 rounded hover:bg-red-800">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Desktop Icons -->
+                <div class="hidden md:flex items-center gap-4 text-gray-700">
+                    <button class="hover:text-red-700 transition">
+                        <i class="fas fa-heart text-xl"></i>
+                    </button>
+                    <button class="hover:text-red-700 transition">
+                        <i class="fas fa-user text-xl"></i>
+                    </button>
+                    <button class="hover:text-red-700 transition relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-red-700 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">3</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobileMenuBtn" class="md:hidden text-2xl text-gray-700 hover:text-red-700 transition">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="hidden md:block border-t border-gray-200">
+                <ul class="flex items-center justify-center gap-6 lg:gap-8 py-4 text-sm font-medium">
+                    <!-- Menu Item 1 -->
+                    <li class="dropdown relative group">
+                        <a href="#" class="hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
+                            المعادن والحديد الإنشائي
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2">
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">حديد التسليح</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الصاج والألواح المعدنية</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">المواسير الحديدية</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الشبك الحديدي</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الزوايا والقطاعات</a>
+                        </div>
+                    </li>
+
+                    <!-- Menu Item 2 -->
+                    <li class="dropdown relative group">
+                        <a href="#" class="hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
+                            الأخشاب والمنتجات الخشبية
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2">
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">خشب الكونتر</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">خشب MDF</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الألواح الخشبية</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الأبواب الخشبية</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الباركيه والأرضيات</a>
+                        </div>
+                    </li>
+
+                    <!-- Menu Item 3 -->
+                    <li class="dropdown relative group">
+                        <a href="#" class="hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
+                            الكهرباء والإنارة
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2">
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الكابلات والأسلاك</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">اللوحات الكهربائية</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">وحدات الإنارة LED</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">المفاتيح والمقابس</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">أنظمة الحماية</a>
+                        </div>
+                    </li>
+
+                    <!-- Menu Item 4 -->
+                    <li class="dropdown relative group">
+                        <a href="#" class="hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
+                            مواد البناء وعوازل الموقع
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2">
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الأسمنت والجبس</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الطوب والبلوك</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">العوازل المائية والحرارية</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">البلاط والسيراميك</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الدهانات والطلاء</a>
+                        </div>
+                    </li>
+
+                    <!-- Menu Item 5 -->
+                    <li class="dropdown relative group">
+                        <a href="#" class="hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
+                            السباكة والمياه
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2">
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">مواسير PVC</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الخلاطات والحنفيات</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">خزانات المياه</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">المراحيض والأحواض</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">مضخات المياه</a>
+                        </div>
+                    </li>
+
+                    <!-- Menu Item 6 -->
+                    <li class="dropdown relative group">
+                        <a href="#" class="hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
+                            العدد والأدوات
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2">
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">الأدوات الكهربائية</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">أدوات القياس</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">العدد اليدوية</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">معدات السلامة</a>
+                            <a href="#" class="block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition">السلالم والسقالات</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="menuOverlay" class="menu-overlay fixed inset-0 bg-black bg-opacity-50 z-40"></div>
+
+    <!-- Mobile Menu Sidebar -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl z-50 overflow-y-auto">
+        <div class="p-6">
+            <!-- Close Button -->
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold text-red-700">القائمة</h3>
+                <button id="closeMobileMenu" class="text-2xl text-gray-700 hover:text-red-700">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Search Bar Mobile -->
+            <div class="mb-6">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        placeholder="ابحث في المتجر..."
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
+                    />
+                    <button class="absolute left-2 top-1/2 -translate-y-1/2 text-red-700">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Items -->
+            <div class="space-y-2">
+                <!-- Menu Item 1 -->
+                <div class="border-b border-gray-200">
+                    <button class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
+                        <span>المعادن والحديد الإنشائي</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">حديد التسليح</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الصاج والألواح المعدنية</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">المواسير الحديدية</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الشبك الحديدي</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الزوايا والقطاعات</a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="border-b border-gray-200">
+                    <button class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
+                        <span>الأخشاب والمنتجات الخشبية</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">خشب الكونتر</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">خشب MDF</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الألواح الخشبية</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الأبواب الخشبية</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الباركيه والأرضيات</a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="border-b border-gray-200">
+                    <button class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
+                        <span>الكهرباء والإنارة</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الكابلات والأسلاك</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">اللوحات الكهربائية</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">وحدات الإنارة LED</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">المفاتيح والمقابس</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">أنظمة الحماية</a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 4 -->
+                <div class="border-b border-gray-200">
+                    <button class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
+                        <span>مواد البناء وعوازل الموقع</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الأسمنت والجبس</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الطوب والبلوك</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">العوازل المائية والحرارية</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">البلاط والسيراميك</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الدهانات والطلاء</a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 5 -->
+                <div class="border-b border-gray-200">
+                    <button class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
+                        <span>السباكة والمياه</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">مواسير PVC</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الخلاطات والحنفيات</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">خزانات المياه</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">المراحيض والأحواض</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">مضخات المياه</a>
+                    </div>
+                </div>
+
+                <!-- Menu Item 6 -->
+                <div class="border-b border-gray-200">
+                    <button class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
+                        <span>العدد والأدوات</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">الأدوات الكهربائية</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">أدوات القياس</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">العدد اليدوية</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">معدات السلامة</a>
+                        <a href="#" class="block py-2 text-gray-600 hover:text-red-700">السلالم والسقالات</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Footer -->
+            <div class="mt-6 pt-6 border-t border-gray-200 flex justify-center gap-4">
+                <button class="text-gray-700 hover:text-red-700 text-xl">
+                    <i class="fas fa-heart"></i>
+                </button>
+                <button class="text-gray-700 hover:text-red-700 text-xl">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="text-gray-700 hover:text-red-700 text-xl relative">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-700 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">3</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+<!-- Hero Section - تصميم مبسط وأنيق -->
+<section class="hero-section h-[800px] flex items-center relative overflow-hidden">
+    <!-- صورة الخلفية الواحدة مع تأثيرات -->
+    <div class="absolute inset-0 z-0">
+        <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                 alt="بيت ورد لمواد البناء والعزل" 
+                 class="hero-image">
+            <!-- تأثير الضباب الخفيف -->
+            <div class="fog-overlay"></div>
+            <!-- تدرج لوني للتركيز -->
+            <div class="gradient-overlay-right"></div>
+        </div>
+    </div>
+    
+    <!-- المحتوى على اليمين -->
+    <div class="container mx-auto px-4 z-10 relative">
+        <div class="flex justify-start">
+            <div class="w-full lg:w-1/2 text-right">
+                <!-- العنوان الرئيسي -->
+                <div class="mb-8">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 leading-tight">
+                        <div class="overflow-hidden">
+                            <span class="block transform translate-x-full animate-slide-in" style="animation-delay: 0.2s;">
+                                بيت <span class="text-red-400">ورد</span>
+                            </span>
+                        </div>
+                        <div class="overflow-hidden">
+                            <span class="block transform translate-x-full animate-slide-in" style="animation-delay: 0.4s;">
+                                لمواد البناء <span class="text-amber-400">والعزل</span>
+                            </span>
+                        </div>
+                    </h1>
+                    <div class="overflow-hidden">
+                        <div class="transform translate-x-full animate-slide-in" style="animation-delay: 0.6s;">
+                            <div class="w-24 h-1 bg-gradient-to-l from-red-500 to-amber-500 my-6 ml-auto"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- النص الوصفي -->
+                <div class="mb-10">
+                    <div class="overflow-hidden">
+                        <p class="text-lg md:text-xl text-gray-200 leading-relaxed transform translate-x-full animate-slide-in" 
+                           style="animation-delay: 0.8s;">
+                            <span class="text-white font-bold">بيت ورد</span> - رائدة في مجال مواد البناء والعزل لأكثر من 50 عاماً.<br>
+                            نقدم حلولاً متكاملة من الحديد الإنشائي والأخشاب ومواد العزل الحراري والصوتي 
+                            للمشاريع السكنية والتجارية في المملكة العربية السعودية.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- الأزرار -->
+                <div class="flex flex-col sm:flex-row gap-4 mb-12 justify-start">
+                    <div class="overflow-hidden">
+                        <a href="#products" class="btn-primary transform translate-x-full animate-slide-in inline-block" 
+                           style="animation-delay: 1s;">
+                            <span class="flex items-center justify-center gap-2">
+                                منتجاتنا
+                                <i class="fas fa-boxes text-lg"></i>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="overflow-hidden">
+                        <a href="#contact" class="btn-secondary transform translate-x-full animate-slide-in inline-block" 
+                           style="animation-delay: 1.2s;">
+                            <span class="flex items-center justify-center gap-2">
+                                طلب عرض سعر
+                                <i class="fas fa-file-invoice text-lg"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- الإحصائيات -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                    <!-- خبرة -->
+                    <div class="overflow-hidden">
+                        <div class="stat-card transform translate-x-full animate-slide-in" style="animation-delay: 1.4s;">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">
+                                <span class="counter" data-target="50">0</span>+
+                            </div>
+                            <div class="text-sm text-gray-300">سنة خبرة</div>
+                            <!-- <div class="stat-icon">
+                                <i class="fas fa-award text-red-400"></i>
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                    <!-- مشاريع -->
+                    <div class="overflow-hidden">
+                        <div class="stat-card transform translate-x-full animate-slide-in" style="animation-delay: 1.6s;">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">
+                                <span class="counter" data-target="1200">0</span>+
+                            </div>
+                            <div class="text-sm text-gray-300">مشروع ناجح</div>
+                            <!-- <div class="stat-icon">
+                                <i class="fas fa-building text-amber-400"></i>
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                    <!-- عملاء -->
+                    <div class="overflow-hidden">
+                        <div class="stat-card transform translate-x-full animate-slide-in" style="animation-delay: 1.8s;">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">
+                                <span class="counter" data-target="500">0</span>+
+                            </div>
+                            <div class="text-sm text-gray-300">عميل راضي</div>
+                            <!-- <div class="stat-icon">
+                                <i class="fas fa-users text-green-400"></i>
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                    <!-- جودة -->
+                    <div class="overflow-hidden">
+                        <div class="stat-card transform translate-x-full animate-slide-in" style="animation-delay: 2s;">
+                            <div class="text-3xl md:text-4xl font-bold text-white mb-2">
+                                ISO
+                            </div>
+                            <div class="text-sm text-gray-300">جودة معتمدة</div>
+                            <!-- <div class="stat-icon">
+                                <i class="fas fa-certificate text-blue-400"></i>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  
+</section>
+
+<style>
+    /* أنماط القسم */
+    .hero-section {
+        font-family: 'Cairo', sans-serif;
+        
+    }
+    
+    /* الصورة والخلفية */
+    .image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(0.9);
+    }
+    
+    /* تأثير الضباب */
+    .fog-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, 
+            rgba(255, 255, 255, 0.08) 0%, 
+            rgba(255, 255, 255, 0.05) 25%, 
+            rgba(255, 255, 255, 0.08) 50%, 
+            rgba(255, 255, 255, 0.05) 75%, 
+            rgba(255, 255, 255, 0.08) 100%);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+    }
+    
+    /* التدرج اللوني على اليمين */
+    .gradient-overlay-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        background: linear-gradient(to left, 
+            rgba(0, 0, 0, 0.9) 0%, 
+            rgba(0, 0, 0, 0.7) 30%, 
+            rgba(0, 0, 0, 0.5) 50%, 
+            transparent 100%);
+    }
+    
+    /* الأنماط المتحركة */
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes bounceSlow {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    
+    .animate-slide-in {
+        animation: slideIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        opacity: 0;
+    }
+    
+    .animate-bounce-slow {
+        animation: bounceSlow 2s infinite;
+    }
+    
+    /* الأزرار */
+    .btn-primary {
+        background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        color: white;
+        padding: 16px 32px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
+        text-decoration: none;
+        display: inline-block;
+        min-width: 200px;
+        text-align: center;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .btn-secondary {
+        background: rgba(255, 255, 255, 0.95);
+        color: #1f2937;
+        padding: 16px 32px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        text-decoration: none;
+        display: inline-block;
+        min-width: 200px;
+        text-align: center;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .btn-secondary:hover {
+        background: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        border-color: rgba(220, 38, 38, 0.3);
+    }
+    
+    /* بطاقات الإحصائيات */
+    .stat-card {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 24px 16px;
+        text-align: center;
+        position: relative;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-5px);
+        background: rgba(0, 0, 0, 0.5);
+        border-color: rgba(220, 38, 38, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(to bottom, #dc2626, #f59e0b);
+        border-radius: 0 16px 16px 0;
+    }
+    
+    .stat-icon {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 1.5rem;
+        opacity: 0.8;
+    }
+    
+    /* مؤشر التمرير */
+    .scroll-indicator {
+        display: inline-block;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .scroll-indicator:hover {
+        transform: scale(1.1);
+    }
+    
+    /* تحسينات للجوال */
+    @media (max-width: 768px) {
+        .hero-section {
+            min-height: 90vh;
+        }
+        
+        .image-wrapper {
+            height: 90vh;
+        }
+        
+        .gradient-overlay-right {
+            width: 100%;
+            background: linear-gradient(to top, 
+                rgba(0, 0, 0, 0.9) 0%, 
+                rgba(0, 0, 0, 0.7) 50%, 
+                transparent 100%);
+        }
+        
+        h1 {
+            font-size: 2.5rem !important;
+        }
+        
+        .btn-primary, .btn-secondary {
+            min-width: 100%;
+            padding: 14px 24px;
+        }
+        
+        .stat-card {
+            padding: 20px 12px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        h1 {
+            font-size: 2rem !important;
+        }
+        
+        .stat-card {
+            padding: 16px 10px;
+        }
+        
+        .scroll-indicator {
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // تشغيل الأنماط المتحركة
+        function startAnimations() {
+            // تفعيل الأنماط المتحركة للعناصر
+            const animatedElements = document.querySelectorAll('.animate-slide-in');
+            animatedElements.forEach((element, index) => {
+                setTimeout(() => {
+                    element.style.animationPlayState = 'running';
+                }, 100 + (index * 50));
+            });
+            
+            // تشغيل عدادات الإحصائيات
+            const counters = document.querySelectorAll('.counter');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        counters.forEach(counter => {
+                            const target = parseInt(counter.getAttribute('data-target'));
+                            const duration = 1500;
+                            const step = target / (duration / 16);
+                            
+                            let current = 0;
+                            const timer = setInterval(() => {
+                                current += step;
+                                if (current >= target) {
+                                    counter.textContent = target;
+                                    clearInterval(timer);
+                                } else {
+                                    counter.textContent = Math.floor(current);
+                                }
+                            }, 16);
+                        });
+                    }
+                });
+            }, { threshold: 0.3 });
+            
+            observer.observe(document.querySelector('.hero-section'));
+            
+            // إضافة تأثير التمرير السلس
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+        
+        // بدء المؤثرات بعد تحميل الصورة
+        const heroImage = document.querySelector('.hero-image');
+        if (heroImage.complete) {
+            startAnimations();
+        } else {
+            heroImage.addEventListener('load', startAnimations);
+            setTimeout(startAnimations, 1000);
+        }
+        
+        // تأثيرات إضافية للأزرار
+        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.02)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+        
+        // تأثيرات بطاقات الإحصائيات
+        document.querySelectorAll('.stat-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                const icon = this.querySelector('.stat-icon i');
+                if (icon) {
+                    icon.style.transform = 'scale(1.2) rotate(5deg)';
+                    icon.style.transition = 'transform 0.3s ease';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                const icon = this.querySelector('.stat-icon i');
+                if (icon) {
+                    icon.style.transform = 'scale(1) rotate(0)';
+                }
+            });
+        });
+    });
+</script>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image -->
+                <div class="scroll-animate">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800" 
+                         alt="About Bayt Ward" 
+                         class="rounded-2xl shadow-2xl w-full h-auto">
+                </div>
+
+                <!-- Content -->
+                <div class="scroll-animate">
+                    <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                        من نحن
+                    </div>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                        شريكك الموثوق في<br/>
+                        <span class="text-red-700">مواد البناء والعزل</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        بيت ورد هي واحدة من أبرز الشركات الرائدة في مجال توريد مواد البناء والعزل في المملكة العربية السعودية. 
+                        منذ تأسيسنا في عام 1969، نفخر بتقديم أعلى معايير الجودة والخدمة لعملائنا.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        نحن نخدم أكثر من 160 موقعاً على مستوى المملكة، ونوفر مجموعة شاملة من المنتجات التي تلبي 
+                        جميع احتياجات مشاريع البناء من الحديد والأخشاب إلى الكهرباء والسباكة.
+                    </p>
+
+                    <!-- Features List -->
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 text-red-700 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">منتجات عالية الجودة</h4>
+                                <p class="text-gray-600">نوفر أفضل المنتجات من علامات تجارية موثوقة ومعتمدة دولياً</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 text-red-700 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-truck text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">توصيل سريع وموثوق</h4>
+                                <p class="text-gray-600">شبكة توزيع واسعة تضمن وصول طلباتك في الوقت المحدد</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-red-100 text-red-700 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-users text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">فريق خبراء محترف</h4>
+                                <p class="text-gray-600">أكثر من 600 استشاري متخصص لمساعدتك في اختيار المنتجات المناسبة</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="bg-red-700 hover:bg-red-800 text-white px-8 py-3 rounded-lg font-semibold transition-all shadow-lg hover:shadow-xl hover:scale-105">
+                        اعرف المزيد عنا
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-16 scroll-animate">
+                <div class="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    خدماتنا
+                </div>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+                    نقدم لك <span class="text-red-700">حلولاً متكاملة</span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+                    نوفر مجموعة شاملة من الخدمات والمنتجات لتلبية جميع احتياجات مشاريعك
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-card scroll-animate group">
+                    <div class="bg-red-100 text-red-700 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-red-700 group-hover:text-white transition-all">
+                        <i class="fas fa-hard-hat text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">المعادن والحديد</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        نوفر جميع أنواع حديد التسليح، الصاج، المواسير الحديدية، والقطاعات المعدنية بأعلى معايير الجودة
+                    </p>
+                    <a href="#" class="text-red-700 font-semibold hover:text-red-800 inline-flex items-center gap-2">
+                        استكشف المنتجات
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-card scroll-animate group" style="animation-delay: 0.1s;">
+                    <div class="bg-red-100 text-red-700 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-red-700 group-hover:text-white transition-all">
+                        <i class="fas fa-tree text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">الأخشاب والديكور</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        مجموعة واسعة من الأخشاب الطبيعية والمصنعة، الأبواب، الأرضيات، ومواد الديكور الخشبية
+                    </p>
+                    <a href="#" class="text-red-700 font-semibold hover:text-red-800 inline-flex items-center gap-2">
+                        استكشف المنتجات
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-card scroll-animate group" style="animation-delay: 0.2s;">
+                    <div class="bg-red-100 text-red-700 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-red-700 group-hover:text-white transition-all">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">الكهرباء والإنارة</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        كابلات، لوحات كهربائية، وحدات إنارة LED، مفاتيح ومقابس، وأنظمة حماية متكاملة
+                    </p>
+                    <a href="#" class="text-red-700 font-semibold hover:text-red-800 inline-flex items-center gap-2">
+                        استكشف المنتجات
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-card scroll-animate group" style="animation-delay: 0.3s;">
+                    <div class="bg-red-100 text-red-700 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-red-700 group-hover:text-white transition-all">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">مواد البناء والعزل</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        أسمنت، طوب، بلوك، عوازل مائية وحرارية، بلاط، سيراميك، ودهانات عالية الجودة
+                    </p>
+                    <a href="#" class="text-red-700 font-semibold hover:text-red-800 inline-flex items-center gap-2">
+                        استكشف المنتجات
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-card scroll-animate group" style="animation-delay: 0.4s;">
+                    <div class="bg-red-100 text-red-700 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-red-700 group-hover:text-white transition-all">
+                        <i class="fas fa-tint text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">السباكة والصرف</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        مواسير PVC، خلاطات، خزانات مياه، أدوات صحية، ومضخات بأحدث المواصفات العالمية
+                    </p>
+                    <a href="#" class="text-red-700 font-semibold hover:text-red-800 inline-flex items-center gap-2">
+                        استكشف المنتجات
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover-card scroll-animate group" style="animation-delay: 0.5s;">
+                    <div class="bg-red-100 text-red-700 w-16 h-16 rounded-full flex items-center justify-center mb-6 group-hover:bg-red-700 group-hover:text-white transition-all">
+                        <i class="fas fa-tools text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">العدد والأدوات</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        أدوات كهربائية ويدوية، معدات قياس، معدات سلامة، سلالم وسقالات لجميع أعمال البناء
+                    </p>
+                    <a href="#" class="text-red-700 font-semibold hover:text-red-800 inline-flex items-center gap-2">
+                        استكشف المنتجات
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-red-700 to-red-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto scroll-animate">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                    هل لديك مشروع قادم؟
+                </h2>
+                <p class="text-lg md:text-xl mb-8 opacity-90">
+                    دعنا نساعدك في اختيار أفضل المواد والحلول المناسبة لمشروعك
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-red-700 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl hover:scale-105">
+                        <i class="fas fa-phone ml-2"></i>
+                        اتصل بنا الآن
+                    </button>
+                    <button class="bg-transparent border-2 border-white hover:bg-white hover:text-red-700 px-8 py-4 rounded-lg font-semibold text-lg transition-all">
+                        <i class="fas fa-calculator ml-2"></i>
+                        احسب تكلفة مشروعك
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- معرض صور المنتجات -->
+<section class="products-gallery py-16 md:py-20 bg-gradient-to-b from-gray-50 to-white" id="products">
+    <div class="container mx-auto px-4">
+        <!-- عنوان القسم -->
+        <div class="text-center mb-12 md:mb-16">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+                منتجاتنا <span class="text-red-600">المتميزة</span>
+            </h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-red-600 to-amber-500 mx-auto mb-6"></div>
+            <p class="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                استعرض تشكيلتنا الواسعة من مواد البناء والعزل عالية الجودة، 
+                التي تلبي أعلى معايير السلامة والمتانة للمشاريع السكنية والتجارية.
+            </p>
+        </div>
+
+        <!-- فلاتر التصنيف -->
+        <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-10 md:mb-12">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-th-large ml-2"></i>
+                جميع المنتجات
+            </button>
+            <button class="filter-btn" data-filter="insulation">
+                <i class="fas fa-thermometer-half ml-2"></i>
+                مواد العزل
+            </button>
+            <button class="filter-btn" data-filter="steel">
+                <i class="fas fa-weight-hanging ml-2"></i>
+                الحديد الإنشائي
+            </button>
+            <button class="filter-btn" data-filter="wood">
+                <i class="fas fa-tree ml-2"></i>
+                الأخشاب
+            </button>
+            <button class="filter-btn" data-filter="tools">
+                <i class="fas fa-tools ml-2"></i>
+                أدوات البناء
+            </button>
+        </div>
+
+        <!-- شبكة المعرض -->
+        <div class="gallery-grid mb-12">
+            <!-- المنتج 1 -->
+            <div class="gallery-item" data-category="insulation">
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="الصوف الصخري للعزل" 
+                             class="gallery-image">
+                        <div class="image-overlay">
+                            <button class="view-btn" data-image="1">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <span class="product-badge">الأكثر طلباً</span>
+                        <h3 class="product-title">الصوف الصخري</h3>
+                        <p class="product-description">مادة عزل حراري وصوتي عالية الكفاءة للمباني السكنية والتجارية.</p>
+                        <div class="product-tags">
+                            <span class="tag">عزل حراري</span>
+                            <span class="tag">عزل صوتي</span>
+                            <span class="tag">مقاوم للحريق</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المنتج 2 -->
+            <div class="gallery-item" data-category="steel">
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="https://images.unsplash.com/photo-1628746406382-32a77cee6272?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="الفلين العازل" 
+                             class="gallery-image">
+                        <div class="image-overlay">
+                            <button class="view-btn" data-image="2">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <span class="product-badge">صديق للبيئة</span>
+                        <h3 class="product-title">الفلين العازل</h3>
+                        <p class="product-description">عازل طبيعي فعال للحرارة والصوت، صديق للبيئة وذو عمر طويل.</p>
+                        <div class="product-tags">
+                            <span class="tag">طبيعي</span>
+                            <span class="tag">عازل حراري</span>
+                            <span class="tag">خفيف الوزن</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المنتج 3 -->
+            <div class="gallery-item" data-category="steel">
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="حديد التسليح" 
+                             class="gallery-image">
+                        <div class="image-overlay">
+                            <button class="view-btn" data-image="3">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <span class="product-badge">أعلى جودة</span>
+                        <h3 class="product-title">حديد التسليح</h3>
+                        <p class="product-description">حديد تسليح عالي الجودة لمتانة وقوة الهياكل الخرسانية.</p>
+                        <div class="product-tags">
+                            <span class="tag">إنشائي</span>
+                            <span class="tag">متانة عالية</span>
+                            <span class="tag">مقاوم للصدأ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المنتج 4 -->
+            <div class="gallery-item" data-category="wood">
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="https://images.unsplash.com/photo-1599159340657-e4d4c8b7f08e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="أخشاب بناء" 
+                             class="gallery-image">
+                        <div class="image-overlay">
+                            <button class="view-btn" data-image="4">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <span class="product-badge">معالج حرارياً</span>
+                        <h3 class="product-title">أخشاب البناء</h3>
+                        <p class="product-description">أخشاب معالجة ومقاومة للرطوبة والحشرات لجميع أغراض البناء.</p>
+                        <div class="product-tags">
+                            <span class="tag">معالج</span>
+                            <span class="tag">مقاوم</span>
+                            <span class="tag">متعدد الاستخدامات</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المنتج 5 -->
+            <div class="gallery-item" data-category="insulation">
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="الرقائق العاكسة" 
+                             class="gallery-image">
+                        <div class="image-overlay">
+                            <button class="view-btn" data-image="5">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="product-title">الرقائق العاكسة</h3>
+                        <p class="product-description">عوازل حرارية تعمل على عكس الحرارة وتقليل انتقالها عبر الأسطح.</p>
+                        <div class="product-tags">
+                            <span class="tag">عاكس حراري</span>
+                            <span class="tag">سهل التركيب</span>
+                            <span class="tag">عمر طويل</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المنتج 6 -->
+            <div class="gallery-item" data-category="tools">
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="أدوات بناء" 
+                             class="gallery-image">
+                        <div class="image-overlay">
+                            <button class="view-btn" data-image="6">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <span class="product-badge">جديد</span>
+                        <h3 class="product-title">أدوات البناء</h3>
+                        <p class="product-description">مجموعة متكاملة من أدوات البناء عالية الجودة لجميع الاحتياجات.</p>
+                        <div class="product-tags">
+                            <span class="tag">أدوات يدوية</span>
+                            <span class="tag">كهربائية</span>
+                            <span class="tag">سلامة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المنتج 7 -->
+            <div class="gallery-item" data-category="steel">
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="البلاطات الخرسانية" 
+                             class="gallery-image">
+                        <div class="image-overlay">
+                            <button class="view-btn" data-image="7">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <h3 class="product-title">البلاطات الخرسانية</h3>
+                        <p class="product-description">بلاطات خرسانية مسبقة الصب بمواصفات عالية الجودة للمباني.</p>
+                        <div class="product-tags">
+                            <span class="tag">مسبق الصب</span>
+                            <span class="tag">متانة</span>
+                            <span class="tag">تشطيبات</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- المنتج 8 -->
+            <div class="gallery-item" data-category="insulation">
+                <div class="gallery-card">
+                    <div class="gallery-image-container">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="البوليسترين الممدد" 
+                             class="gallery-image">
+                        <div class="image-overlay">
+                            <button class="view-btn" data-image="8">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery-content">
+                        <span class="product-badge">خفيف الوزن</span>
+                        <h3 class="product-title">البوليسترين الممدد</h3>
+                        <p class="product-description">مادة عزل خفيفة الوزن وفعالة للعزل الحراري في الجدران والأسقف.</p>
+                        <div class="product-tags">
+                            <span class="tag">خفيف</span>
+                            <span class="tag">عازل حراري</span>
+                            <span class="tag">سهل القص</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- زر عرض المزيد -->
+        <div class="text-center">
+            <button id="load-more" class="load-more-btn">
+                <i class="fas fa-plus ml-2"></i>
+                عرض المزيد من المنتجات
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox للصور -->
+<div class="lightbox-overlay">
+    <div class="lightbox-container">
+        <button class="lightbox-close">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="lightbox-nav prev">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <button class="lightbox-nav next">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-image">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title"></h3>
+                <p class="lightbox-description"></p>
+                <div class="lightbox-tags"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* أنماط معرض الصور */
+    .products-gallery {
+        font-family: 'Cairo', sans-serif;
+        direction: rtl;
+    }
+
+    /* فلاتر التصنيف */
+    .filter-btn {
+        background: white;
+        border: 2px solid #e5e7eb;
+        color: #4b5563;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .filter-btn:hover {
+        border-color: #dc2626;
+        color: #dc2626;
+        transform: translateY(-2px);
+    }
+
+    .filter-btn.active {
+        background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        color: white;
+        border-color: #dc2626;
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+    }
+
+    /* شبكة المعرض */
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+
+    @media (min-width: 640px) {
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .gallery-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .gallery-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    /* بطاقة المنتج */
+    .gallery-card {
+        background: white;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #f3f4f6;
+    }
+
+    .gallery-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+        border-color: #fecaca;
+    }
+
+    /* حاوية الصورة */
+    .gallery-image-container {
+        position: relative;
+        overflow: hidden;
+        height: 220px;
+    }
+
+    @media (min-width: 768px) {
+        .gallery-image-container {
+            height: 250px;
+        }
+    }
+
+    .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+    .gallery-card:hover .gallery-image {
+        transform: scale(1.08);
+    }
+
+    /* طبقة التغطية على الصورة */
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.4));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 16px;
+    }
+
+    .gallery-card:hover .image-overlay {
+        opacity: 1;
+    }
+
+    .view-btn {
+        background: rgba(255, 255, 255, 0.95);
+        border: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #dc2626;
+        font-size: 1.1rem;
+    }
+
+    .view-btn:hover {
+        background: white;
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* محتوى البطاقة */
+    .gallery-content {
+        padding: 20px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-badge {
+        background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 12px;
+        align-self: flex-start;
+    }
+
+    .product-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 8px;
+        line-height: 1.4;
+    }
+
+    .product-description {
+        color: #6b7280;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 16px;
+        flex-grow: 1;
+    }
+
+    .product-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .tag {
+        background: #f3f4f6;
+        color: #4b5563;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    /* زر عرض المزيد */
+    .load-more-btn {
+        background: white;
+        border: 2px solid #dc2626;
+        color: #dc2626;
+        padding: 14px 32px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
+    }
+
+    .load-more-btn:hover {
+        background: #dc2626;
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(220, 38, 38, 0.2);
+    }
+
+    /* Lightbox */
+    .lightbox-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 9999;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        backdrop-filter: blur(10px);
+    }
+
+    .lightbox-overlay.active {
+        display: flex;
+        animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .lightbox-container {
+        position: relative;
+        max-width: 900px;
+        width: 100%;
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        animation: slideUp 0.4s ease;
+    }
+
+    @keyframes slideUp {
+        from { 
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to { 
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .lightbox-close {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        color: #1f2937;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+    .lightbox-close:hover {
+        background: white;
+        transform: rotate(90deg);
+    }
+
+    .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        color: #1f2937;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+    }
+
+    .lightbox-nav:hover {
+        background: white;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .lightbox-nav.prev {
+        right: 20px;
+    }
+
+    .lightbox-nav.next {
+        left: 20px;
+    }
+
+    .lightbox-content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    @media (min-width: 768px) {
+        .lightbox-content {
+            flex-direction: row;
+        }
+    }
+
+    .lightbox-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+        .lightbox-image {
+            width: 60%;
+            height: 500px;
+        }
+    }
+
+    .lightbox-info {
+        padding: 30px;
+        width: 100%;
+        background: white;
+    }
+
+    @media (min-width: 768px) {
+        .lightbox-info {
+            width: 40%;
+        }
+    }
+
+    .lightbox-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 12px;
+    }
+
+    .lightbox-description {
+        color: #6b7280;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .lightbox-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    /* تأثيرات للعناصر */
+    .gallery-item {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeUp 0.6s ease forwards;
+    }
+
+    @keyframes fadeUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* إخفاء العناصر للتصفية */
+    .gallery-item.hidden {
+        display: none;
+    }
+
+    /* تحسينات للجوال */
+    @media (max-width: 640px) {
+        .filter-btn {
+            padding: 8px 16px;
+            font-size: 0.85rem;
+        }
+
+        .gallery-image-container {
+            height: 200px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+        }
+
+        .lightbox-container {
+            margin: 10px;
+        }
+
+        .lightbox-info {
+            padding: 20px;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // بيانات المنتجات
+        const productsData = {
+            1: {
+                title: "الصوف الصخري",
+                description: "مادة عزل حراري وصوتي عالية الكفاءة مصنوعة من الصخور البركانية. تتميز بمقاومة عالية للحريق والحرارة مع عمر افتراضي طويل يصل إلى 50 عاماً. مثالية للمباني السكنية والتجارية والمستشفيات والمدارس.",
+                tags: ["عزل حراري", "عزل صوتي", "مقاوم للحريق", "صديق للبيئة", "عمر طويل"]
+            },
+            2: {
+                title: "الفلين العازل",
+                description: "عازل طبيعي 100% مستخرج من لحاء أشجار البلوط. يتميز بخفة الوزن وسهولة التركيب ومقاومة عالية للرطوبة والعفن. مثالي للعزل الحراري والصوتي في المناطق الرطبة.",
+                tags: ["طبيعي", "عازل حراري", "خفيف الوزن", "مقاوم للرطوبة", "سهل التركيب"]
+            },
+            3: {
+                title: "حديد التسليح",
+                description: "حديد تسليح عالي الجودة بمواصفات عالمية. يتمتع بمتانة وقوة تحمل عالية مع مقاومة ممتازة للصدأ والتآكل. متوفر بمقاسات مختلفة تناسب جميع أنواع المشاريع الإنشائية.",
+                tags: ["إنشائي", "متانة عالية", "مقاوم للصدأ", "أقطار مختلفة", "جودة عالمية"]
+            },
+            4: {
+                title: "أخشاب البناء",
+                description: "أخشاب معالجة حرارياً ومقاومة للرطوبة والحشرات والعفن. تتميز بالقوة والمتانة مع إمكانية استخدامها في جميع أغراض البناء والديكورات الداخلية والخارجية.",
+                tags: ["معالج حراري", "مقاوم للرطوبة", "متعدد الاستخدامات", "ديكور", "بناء"]
+            },
+            5: {
+                title: "الرقائق العاكسة",
+                description: "عوازل حرارية تعمل على عكس الحرارة بنسبة تصل إلى 97%. سهلة التركيب وخفيفة الوزن مع عمر افتراضي طويل. مثالية للأسقف والجدران الخارجية.",
+                tags: ["عاكس حراري", "سهل التركيب", "عمر طويل", "خفيف الوزن", "عالي الكفاءة"]
+            },
+            6: {
+                title: "أدوات البناء",
+                description: "مجموعة متكاملة من أدوات البناء اليدوية والكهربائية عالية الجودة. تشمل جميع المعدات اللازمة لأعمال البناء والتشييد بأعلى معايير السلامة والكفاءة.",
+                tags: ["أدوات يدوية", "كهربائية", "سلامة", "متعددة الاستخدامات", "عمر طويل"]
+            },
+            7: {
+                title: "البلاطات الخرسانية",
+                description: "بلاطات خرسانية مسبقة الصب بمواصفات عالية الجودة وتصاميم متنوعة. توفر وقت وتكلفة البناء مع ضمان متانة وقوة الهياكل الإنشائية.",
+                tags: ["مسبق الصب", "متانة", "تشطيبات", "موفر للوقت", "تصاميم متنوعة"]
+            },
+            8: {
+                title: "البوليسترين الممدد",
+                description: "مادة عزل خفيفة الوزن وفعالة للعزل الحراري في الجدران والأسقف والأرضيات. سهلة القص والتركيب مع مقاومة عالية للرطوبة والعفن.",
+                tags: ["خفيف", "عازل حراري", "سهل القص", "مقاوم للرطوبة", "كفاءة عالية"]
+            }
+        };
+
+        // عناصر DOM
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const viewButtons = document.querySelectorAll('.view-btn');
+        const loadMoreBtn = document.getElementById('load-more');
+        const lightboxOverlay = document.querySelector('.lightbox-overlay');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const lightboxImage = document.querySelector('.lightbox-image');
+        const lightboxTitle = document.querySelector('.lightbox-title');
+        const lightboxDescription = document.querySelector('.lightbox-description');
+        const lightboxTags = document.querySelector('.lightbox-tags');
+        const prevBtn = document.querySelector('.lightbox-nav.prev');
+        const nextBtn = document.querySelector('.lightbox-nav.next');
+
+        let currentFilter = 'all';
+        let currentImageIndex = 0;
+        const imagesArray = Array.from(viewButtons);
+        const totalProducts = galleryItems.length;
+        let visibleProducts = 8;
+        const productsPerLoad = 4;
+
+        // تصفية المنتجات
+        function filterProducts(category) {
+            galleryItems.forEach(item => {
+                const itemCategory = item.dataset.category;
+                
+                if (category === 'all' || itemCategory === category) {
+                    item.classList.remove('hidden');
+                    // إضافة تأثير ظهور
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // تفعيل زر الفلتر
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // إزالة النشاط من جميع الأزرار
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // إضافة النشاط للزر المحدد
+                this.classList.add('active');
+                
+                // تطبيق التصفية
+                currentFilter = this.dataset.filter;
+                filterProducts(currentFilter);
+                
+                // إعادة تعيين عدد المنتجات المرئية
+                visibleProducts = 8;
+                updateLoadMoreButton();
+            });
+        });
+
+        // عرض المزيد من المنتجات
+        function loadMoreProducts() {
+            const hiddenItems = Array.from(galleryItems).filter(item => 
+                !item.classList.contains('hidden') && 
+                getComputedStyle(item).opacity === '0'
+            );
+            
+            const itemsToShow = hiddenItems.slice(0, productsPerLoad);
+            
+            itemsToShow.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px)';
+                    item.style.display = 'block';
+                    
+                    setTimeout(() => {
+                        item.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 10);
+                }, index * 100);
+            });
+            
+            visibleProducts += itemsToShow.length;
+            updateLoadMoreButton();
+        }
+
+        // تحديث زر عرض المزيد
+        function updateLoadMoreButton() {
+            const visibleItems = Array.from(galleryItems).filter(item => 
+                !item.classList.contains('hidden')
+            ).length;
+            
+            if (visibleProducts >= visibleItems) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'inline-flex';
+            }
+        }
+
+        // Lightbox وظائف
+        function openLightbox(imageIndex) {
+            const imageElement = imagesArray[imageIndex];
+            const productId = imageElement.dataset.image;
+            const productData = productsData[productId];
+            const imageSrc = imageElement.closest('.gallery-image-container').querySelector('img').src;
+            
+            lightboxImage.src = imageSrc;
+            lightboxTitle.textContent = productData.title;
+            lightboxDescription.textContent = productData.description;
+            
+            // إضافة الوسوم
+            lightboxTags.innerHTML = '';
+            productData.tags.forEach(tag => {
+                const tagElement = document.createElement('span');
+                tagElement.className = 'tag';
+                tagElement.textContent = tag;
+                lightboxTags.appendChild(tagElement);
+            });
+            
+            currentImageIndex = imageIndex;
+            lightboxOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightboxOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function showNextImage() {
+            currentImageIndex = (currentImageIndex + 1) % imagesArray.length;
+            openLightbox(currentImageIndex);
+        }
+
+        function showPrevImage() {
+            currentImageIndex = (currentImageIndex - 1 + imagesArray.length) % imagesArray.length;
+            openLightbox(currentImageIndex);
+        }
+
+        // تفعيل أزرار Lightbox
+        viewButtons.forEach((button, index) => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                openLightbox(index);
+            });
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        nextBtn.addEventListener('click', showNextImage);
+        prevBtn.addEventListener('click', showPrevImage);
+
+        // إغلاق Lightbox بالنقر خارجها
+        lightboxOverlay.addEventListener('click', function(e) {
+            if (e.target === lightboxOverlay) {
+                closeLightbox();
+            }
+        });
+
+        // إغلاق Lightbox بالزر Esc
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && lightboxOverlay.classList.contains('active')) {
+                closeLightbox();
+            }
+            if (e.key === 'ArrowRight' && lightboxOverlay.classList.contains('active')) {
+                showNextImage();
+            }
+            if (e.key === 'ArrowLeft' && lightboxOverlay.classList.contains('active')) {
+                showPrevImage();
+            }
+        });
+
+        // تفعيل زر عرض المزيد
+        loadMoreBtn.addEventListener('click', loadMoreProducts);
+
+        // تهيئة الأنماط المتحركة للمنتجات
+        function initializeAnimations() {
+            galleryItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+            });
+        }
+
+        // بدء التهيئة
+        initializeAnimations();
+        updateLoadMoreButton();
+
+        // تحسين الأداء للصور
+        const images = document.querySelectorAll('.gallery-image');
+        images.forEach(img => {
+            img.loading = 'lazy';
+        });
+    });
+</script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-2xl font-bold text-red-500 mb-4">بيت ورد</h3>
+                    <p class="text-gray-400 mb-4">
+                        شريكك الموثوق في مواد البناء والعزل منذ 1969
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-red-500 transition">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-red-500 transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-red-500 transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-red-500 transition">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">الرئيسية</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-red-500 transition">من نحن</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-red-500 transition">خدماتنا</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">المنتجات</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">اتصل بنا</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">الفئات</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">المعادن والحديد</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">الأخشاب</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">الكهرباء</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">مواد البناء</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-red-500 transition">السباكة</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">تواصل معنا</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt mt-1"></i>
+                            <span>الرياض، المملكة العربية السعودية</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone"></i>
+                            <span>920031414</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope"></i>
+                            <span>sales@baytalward.com</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-clock"></i>
+                            <span>السبت - الخميس: 8ص - 5م</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 بيت ورد لمواد البناء والعزل. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('active');
+            menuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenuFunc() {
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        closeMobileMenu.addEventListener('click', closeMobileMenuFunc);
+        menuOverlay.addEventListener('click', closeMobileMenuFunc);
+
+        // Mobile Dropdown Toggle
+        const mobileDropdownBtns = document.querySelectorAll('.mobile-dropdown-btn');
+        
+        mobileDropdownBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i');
+                
+                // Close all other dropdowns
+                document.querySelectorAll('.mobile-dropdown-content').forEach(item => {
+                    if (item !== content) {
+                        item.classList.add('hidden');
+                        item.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                    }
+                });
+                
+                // Toggle current dropdown
+                content.classList.toggle('hidden');
+                
+                // Rotate icon
+                if (content.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Scroll Animation
+        const scrollElements = document.querySelectorAll('.scroll-animate');
+
+        const elementInView = (el, dividend = 1) => {
+            const elementTop = el.getBoundingClientRect().top;
+            return (
+                elementTop <=
+                (window.innerHeight || document.documentElement.clientHeight) / dividend
+            );
+        };
+
+        const displayScrollElement = (element) => {
+            element.classList.add('show');
+        };
+
+        const handleScrollAnimation = () => {
+            scrollElements.forEach((el) => {
+                if (elementInView(el, 1.25)) {
+                    displayScrollElement(el);
+                }
+            });
+        };
+
+        window.addEventListener('scroll', () => {
+            handleScrollAnimation();
+        });
+
+        // Initial check for elements in view
+        handleScrollAnimation();
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    closeMobileMenuFunc();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
