@@ -331,6 +331,7 @@
             </div>
         </div>
     </div>
+    
     <!-- Header / Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4">
@@ -344,25 +345,8 @@
                     </div>
                 </div>
 
-
-
-                <!-- Search Bar - Hidden on mobile -->
-                <!-- <div class="hidden md:flex flex-1 max-w-xl mx-8">
-                    <div class="relative w-full">
-                        <input 
-                            type="text" 
-                            placeholder="ابحث في المتجر (بالكامل مثل...)"
-                            class="w-full px-4 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
-                        />
-                        <button class="absolute left-2 top-1/2 -translate-y-1/2 bg-red-700 text-white px-4 py-1 rounded hover:bg-red-800">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </div> -->
-
                 <!-- Desktop Icons -->
                 <div class="hidden md:flex items-center gap-4 text-gray-700">
-
                     <!-- زر الاتصال -->
                     <a href="tel:010297005340" class="hover:text-green-600 transition" title="اتصال">
                         <i class="fas fa-phone-alt text-xl"></i>
@@ -379,9 +363,7 @@
                         title="فيسبوك">
                         <i class="fab fa-facebook-f text-xl"></i>
                     </a>
-
                 </div>
-
 
                 <!-- Mobile Menu Toggle -->
                 <button id="mobileMenuBtn" class="md:hidden text-2xl text-gray-700 hover:text-red-700 transition">
@@ -858,14 +840,12 @@
                     </div>
 
                     <div class="product-actions">
-                        <button class="btn-primary">
-
-                            <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                اطلب الآن
-                            </a>
-                        </button>
+                        <a href="tel:0568524590" class="btn-primary">
+                            <i class="fas fa-phone-alt"></i>
+                            اطلب الآن
+                        </a>
                         <button class="btn-secondary" id="lightboxCloseBtn">
-                            <i class="fas fa-times ml-2"></i>
+                            <i class="fas fa-times"></i>
                             إغلاق
                         </button>
                     </div>
@@ -873,6 +853,473 @@
             </div>
         </div>
     </div>
+
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Dropdown Animation */
+        .dropdown-menu {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu Animation */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        /* Lightbox Styles - Mobile Optimized */
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            backdrop-filter: blur(5px);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .lightbox-overlay.active {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            overflow-y: auto;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .lightbox-container {
+            background: white;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            position: relative;
+            animation: slideUp 0.4s ease;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .lightbox-container {
+                max-width: 900px;
+                width: 95%;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(255, 255, 255, 0.95);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 100;
+            color: #1f2937;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 767px) {
+            .lightbox-close {
+                top: 10px;
+                left: 10px;
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        .lightbox-close:hover {
+            background: white;
+            transform: rotate(90deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .lightbox-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .lightbox-content {
+                flex-direction: row;
+                min-height: 500px;
+            }
+        }
+
+        .lightbox-image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+            background: #f5f5f5;
+        }
+
+        @media (min-width: 768px) {
+            .lightbox-image-container {
+                width: 50%;
+                height: auto;
+                min-height: 500px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .lightbox-image-container {
+                height: 200px;
+            }
+        }
+
+        .lightbox-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .lightbox-info {
+            padding: 20px;
+            width: 100%;
+            overflow-y: auto;
+            max-height: 60vh;
+        }
+
+        @media (min-width: 768px) {
+            .lightbox-info {
+                width: 50%;
+                max-height: 500px;
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .lightbox-info {
+                max-height: calc(100vh - 250px - 50px);
+                padding: 15px;
+            }
+        }
+
+        .lightbox-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #dc2626;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        @media (min-width: 768px) {
+            .lightbox-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        .lightbox-description {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        @media (min-width: 768px) {
+            .lightbox-description {
+                font-size: 1.1rem;
+            }
+        }
+
+        .product-specs {
+            background: #f9fafb;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+
+        @media (max-width: 767px) {
+            .product-specs {
+                padding: 12px;
+                margin: 12px 0;
+            }
+        }
+
+        .spec-item {
+            display: flex;
+            flex-direction: column;
+            padding: 6px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        @media (min-width: 640px) {
+            .spec-item {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            font-weight: 600;
+            color: #4b5563;
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+        }
+
+        .spec-value {
+            color: #1f2937;
+            font-size: 0.9rem;
+            text-align: left;
+        }
+
+        @media (min-width: 640px) {
+            .spec-value {
+                text-align: right;
+            }
+        }
+
+        .product-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        @media (min-width: 640px) {
+            .product-actions {
+                flex-direction: row;
+            }
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            flex: 1;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        @media (min-width: 640px) {
+            .btn-primary {
+                font-size: 1rem;
+            }
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #dc2626;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 2px solid #dc2626;
+            cursor: pointer;
+            flex: 1;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        @media (min-width: 640px) {
+            .btn-secondary {
+                font-size: 1rem;
+            }
+        }
+
+        .btn-secondary:hover {
+            background: #fef2f2;
+            transform: translateY(-2px);
+        }
+
+        /* Overlay Menu Background */
+        .menu-overlay {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Product Category Styles */
+        .category-link {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .category-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: #dc2626;
+            transition: width 0.3s ease;
+        }
+
+        .category-link:hover::after {
+            width: 100%;
+        }
+
+        /* Product Link Styles */
+        .product-link {
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .product-link:hover {
+            background: #fef2f2 !important;
+            transform: translateX(-5px);
+        }
+
+        /* Mobile Responsive Enhancements */
+        @media (max-width: 767px) {
+            .hero-bg {
+                background-attachment: scroll !important;
+            }
+            
+            /* تحسين قابلية القراءة على الشاشات الصغيرة */
+            .lightbox-info {
+                font-size: 0.9rem;
+            }
+            
+            .spec-item {
+                padding: 4px 0;
+            }
+            
+            .btn-primary, .btn-secondary {
+                padding: 10px 16px;
+            }
+        }
+
+        /* تحسين التجربة على الشاشات الصغيرة جداً */
+        @media (max-width: 400px) {
+            .lightbox-container {
+                margin: 5px;
+                border-radius: 12px;
+            }
+            
+            .lightbox-info {
+                padding: 12px;
+            }
+            
+            .lightbox-title {
+                font-size: 1.3rem;
+            }
+            
+            .product-specs {
+                padding: 10px;
+            }
+        }
+
+        /* تحسين التمرير على الجوال */
+        .lightbox-info::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .lightbox-info::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .lightbox-info::-webkit-scrollbar-thumb {
+            background: #dc2626;
+            border-radius: 10px;
+        }
+
+        /* إضافة تأثير عند فتح Lightbox */
+        body.lightbox-open {
+            overflow: hidden;
+        }
+    </style>
 
     <!-- JavaScript -->
     <script>
@@ -1270,7 +1717,15 @@
                 lightboxPrice.textContent = product.price;
 
                 lightboxOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
+                document.body.classList.add('lightbox-open');
+                document.documentElement.style.overflow = 'hidden';
+
+                // تحميل الصورة بسرعة
+                const img = new Image();
+                img.src = product.image;
+                img.onload = function() {
+                    lightboxImage.src = product.image;
+                };
             } else {
                 console.error('Product not found:', productId);
                 alert('عذراً، هذا المنتج غير متوفر حالياً');
@@ -1279,23 +1734,36 @@
 
         function closeLightbox() {
             lightboxOverlay.classList.remove('active');
-            document.body.style.overflow = '';
+            document.body.classList.remove('lightbox-open');
+            document.documentElement.style.overflow = '';
+            
+            // إعادة تعيين الصورة
+            lightboxImage.src = '';
         }
 
         // Event Listeners for Product Links
         productLinks.forEach(link => {
             link.addEventListener('click', function (e) {
                 e.preventDefault();
+                e.stopPropagation();
+                
                 const productId = this.dataset.product;
                 console.log('Opening product:', productId);
+                
+                // إغلاق القائمة المتنقلة إذا كانت مفتوحة
+                if (typeof closeMobileMenuFunc === 'function') {
+                    closeMobileMenuFunc();
+                }
+                
                 openLightbox(productId);
-                closeMobileMenuFunc(); // Close mobile menu if open
             });
         });
 
         // Close Lightbox Events
         lightboxClose.addEventListener('click', closeLightbox);
         lightboxCloseBtn.addEventListener('click', closeLightbox);
+        
+        // إغلاق Lightbox بالنقر على الخلفية
         lightboxOverlay.addEventListener('click', function (e) {
             if (e.target === lightboxOverlay) {
                 closeLightbox();
@@ -1307,6 +1775,34 @@
             if (e.key === 'Escape' && lightboxOverlay.classList.contains('active')) {
                 closeLightbox();
             }
+        });
+
+        // تحسين الأداء على الجوال - منع الازدواجية في النقر
+        let lastTap = 0;
+        productLinks.forEach(link => {
+            link.addEventListener('touchend', function (e) {
+                const currentTime = new Date().getTime();
+                const tapLength = currentTime - lastTap;
+                
+                if (tapLength < 500 && tapLength > 0) {
+                    // منع النقر المزدوج
+                    e.preventDefault();
+                }
+                lastTap = currentTime;
+            });
+        });
+
+        // إغلاق Lightbox عند تغيير اتجاه الشاشة
+        window.addEventListener('orientationchange', function() {
+            setTimeout(function() {
+                if (lightboxOverlay.classList.contains('active')) {
+                    // إعادة حساب أبعاد Lightbox
+                    const lightboxContainer = document.querySelector('.lightbox-container');
+                    if (lightboxContainer) {
+                        lightboxContainer.style.maxHeight = (window.innerHeight - 40) + 'px';
+                    }
+                }
+            }, 300);
         });
 
         // Test all product links
@@ -1341,478 +1837,317 @@
         });
     </script>
     <!-- Hero Section -->
-    <!-- Hero Section - تصميم مبسط وأنيق -->
-    <section class="hero-section h-[800px] flex items-center relative overflow-hidden">
-        <!-- صورة الخلفية الواحدة مع تأثيرات -->
-        <div class="absolute inset-0 z-0">
-            <div class="image-wrapper">
-                <img src="./img/hero.jpg" alt="بيت ورد لمواد البناء والعزل" class="hero-image">
-                <!-- تأثير الضباب الخفيف -->
-                <div class="fog-overlay"></div>
-                <!-- تدرج لوني للتركيز -->
-                <div class="gradient-overlay-right"></div>
-            </div>
-        </div>
-
-        <!-- المحتوى على اليمين -->
-        <div class="container mx-auto px-4 z-10 relative">
-            <div class="flex justify-start">
-                <div class="w-full lg:w-1/2 text-right">
-                    <!-- العنوان الرئيسي -->
-                    <div class="mb-8">
-                        <h1
-                            class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 leading-tight">
-                            <div class="overflow-hidden">
-                                <span class="block transform translate-x-full animate-slide-in"
-                                    style="animation-delay: 0.2s;">
-                                    بيت <span class="text-[#ba1c1c]">ورد</span>
-                                </span>
-                            </div>
-                            <div class="overflow-hidden">
-                                <span class="block transform translate-x-full animate-slide-in"
-                                    style="animation-delay: 0.4s;">
-                                    لمواد البناء <span class="text-amber-400">والعزل</span>
-                                </span>
-                            </div>
-                        </h1>
-                        <div class="overflow-hidden">
-                            <div class="transform translate-x-full animate-slide-in" style="animation-delay: 0.6s;">
-                                <div class="w-24 h-1 bg-gradient-to-l from-red-500 to-amber-500 my-6 ml-auto"></div>
-                            </div>
-                        </div>
+    <div class="hero-final-wrapper">
+        
+        <!-- Slide 1 -->
+        <div class="hero-final-slide active" id="slide-0">
+            <div class="hero-final-bg" style="background-image: url('./img/hero.jpg');"></div>
+            <!-- إضافة طبقة الضباب -->
+            <div class="hero-final-fog"></div>
+            <div class="hero-final-overlay"></div>
+            <div class="hero-final-content">
+                <div class="animate-item delay-1">
+                    <h1 class="hero-final-title">بيت <span class="text-[#dc2626]">ورد</span><br>لمواد البناء <span class="text-amber-400">والعزل</span></h1>
+                </div>
+                <div class="animate-item delay-2 w-24 h-1 bg-gradient-to-l from-red-500 to-amber-500 my-6"></div>
+                <div class="animate-item delay-3">
+                    <p class="hero-final-desc">
+                        <span class="text-white font-bold">بيت ورد</span> - رائدة في مجال مواد البناء والعزل لأكثر من 50 عاماً. نقدم حلولاً متكاملة من الحديد الإنشائي والأخشاب ومواد العزل الحراري والصوتي.
+                    </p>
+                </div>
+                <div class="animate-item delay-4 flex flex-wrap gap-4 mb-10">
+                    <a href="#" class="btn-primary">منتجاتنا</a>
+                    <a href="#" class="btn-secondary">طلب عرض سعر</a>
+                </div>
+                <div class="animate-item delay-5 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="stat-card">
+                        <div class="text-2xl font-bold text-white">50+</div>
+                        <div class="text-xs text-gray-300">سنة خبرة</div>
                     </div>
-
-                    <!-- النص الوصفي -->
-                    <div class="mb-10">
-                        <div class="overflow-hidden">
-                            <p class="text-lg md:text-xl text-gray-200 leading-relaxed transform translate-x-full animate-slide-in"
-                                style="animation-delay: 0.8s;">
-                                <span class="text-white font-bold">بيت ورد</span> - رائدة في مجال مواد البناء والعزل
-                                لأكثر من 50 عاماً.<br>
-                                نقدم حلولاً متكاملة من الحديد الإنشائي والأخشاب ومواد العزل الحراري والصوتي
-                                للمشاريع السكنية والتجارية في المملكة العربية السعودية.
-                            </p>
-                        </div>
+                    <div class="stat-card">
+                        <div class="text-2xl font-bold text-white">1200+</div>
+                        <div class="text-xs text-gray-300">مشروع ناجح</div>
                     </div>
-
-                    <!-- الأزرار -->
-                    <div class="flex flex-col sm:flex-row gap-4 mb-12 justify-start">
-                        <div class="overflow-hidden">
-                            <a href="#products"
-                                class="btn-primary transform translate-x-full animate-slide-in inline-block"
-                                style="animation-delay: 1s;">
-                                <span class="flex items-center justify-center gap-2">
-                                    منتجاتنا
-                                    <i class="fas fa-boxes text-lg"></i>
-                                </span>
-                            </a>
-                        </div>
-                        <div class="overflow-hidden">
-                            <a href="#contact"
-                                class="btn-secondary transform translate-x-full animate-slide-in inline-block"
-                                style="animation-delay: 1.2s;">
-                                <span class="flex items-center justify-center gap-2">
-                                    طلب عرض سعر
-                                    <i class="fas fa-file-invoice text-lg"></i>
-                                </span>
-                            </a>
-                        </div>
+                    <div class="stat-card">
+                        <div class="text-2xl font-bold text-white">500+</div>
+                        <div class="text-xs text-gray-300">عميل راضي</div>
                     </div>
-
-                    <!-- الإحصائيات -->
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-                        <!-- خبرة -->
-                        <div class="overflow-hidden">
-                            <div class="stat-card transform translate-x-full animate-slide-in"
-                                style="animation-delay: 1.4s;">
-                                <div class="text-3xl md:text-4xl font-bold text-white mb-2">
-                                    <span class="counter" data-target="50">0</span>+
-                                </div>
-                                <div class="text-sm text-gray-300">سنة خبرة</div>
-                                <!-- <div class="stat-icon">
-                                <i class="fas fa-award text-red-400"></i>
-                            </div> -->
-                            </div>
-                        </div>
-
-                        <!-- مشاريع -->
-                        <div class="overflow-hidden">
-                            <div class="stat-card transform translate-x-full animate-slide-in"
-                                style="animation-delay: 1.6s;">
-                                <div class="text-3xl md:text-4xl font-bold text-white mb-2">
-                                    <span class="counter" data-target="1200">0</span>+
-                                </div>
-                                <div class="text-sm text-gray-300">مشروع ناجح</div>
-                                <!-- <div class="stat-icon">
-                                <i class="fas fa-building text-amber-400"></i>
-                            </div> -->
-                            </div>
-                        </div>
-
-                        <!-- عملاء -->
-                        <div class="overflow-hidden">
-                            <div class="stat-card transform translate-x-full animate-slide-in"
-                                style="animation-delay: 1.8s;">
-                                <div class="text-3xl md:text-4xl font-bold text-white mb-2">
-                                    <span class="counter" data-target="500">0</span>+
-                                </div>
-                                <div class="text-sm text-gray-300">عميل راضي</div>
-                                <!-- <div class="stat-icon">
-                                <i class="fas fa-users text-green-400"></i>
-                            </div> -->
-                            </div>
-                        </div>
-
-                        <!-- جودة -->
-                        <div class="overflow-hidden">
-                            <div class="stat-card transform translate-x-full animate-slide-in"
-                                style="animation-delay: 2s;">
-                                <div class="text-3xl md:text-4xl font-bold text-white mb-2">
-                                    ISO
-                                </div>
-                                <div class="text-sm text-gray-300">جودة معتمدة</div>
-                                <!-- <div class="stat-icon">
-                                <i class="fas fa-certificate text-blue-400"></i>
-                            </div> -->
-                            </div>
-                        </div>
+                    <div class="stat-card">
+                        <div class="text-2xl font-bold text-white">ISO</div>
+                        <div class="text-xs text-gray-300">جودة معتمدة</div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Slide 2 -->
+        <div class="hero-final-slide" id="slide-1">
+            <div class="hero-final-bg" style="background-image: url('./img/logo.png');"></div>
+            <!-- إضافة طبقة الضباب -->
+            <div class="hero-final-fog"></div>
+            <div class="hero-final-overlay"></div>
+            <div class="hero-final-content">
+                <div class="animate-item delay-1">
+                    <h1 class="hero-final-title">حلول عزل<br><span class="text-amber-400">حراري وصوتي</span> متطورة</h1>
+                </div>
+                <div class="animate-item delay-2 w-24 h-1 bg-gradient-to-l from-red-500 to-amber-500 my-6"></div>
+                <div class="animate-item delay-3">
+                    <p class="hero-final-desc">نقدم أفضل تقنيات العزل التي تضمن حماية منشآتكم وتوفير الطاقة، مع الالتزام التام بالمواصفات القياسية السعودية.</p>
+                </div>
+                <div class="animate-item delay-4 flex flex-wrap gap-4">
+                    <a href="#" class="btn-primary">خدمات العزل</a>
+                    <a href="#" class="btn-secondary">استشارة مجانية</a>
+                </div>
+            </div>
+        </div>
 
-    </section>
+        <!-- Slide 3 -->
+        <div class="hero-final-slide" id="slide-2">
+            <div class="hero-final-bg" style="background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=80');"></div>
+            <!-- إضافة طبقة الضباب -->
+            <div class="hero-final-fog"></div>
+            <div class="hero-final-overlay"></div>
+            <div class="hero-final-content">
+                <div class="animate-item delay-1">
+                    <h1 class="hero-final-title">جودة <span class="text-[#dc2626]">لا تضاهى</span><br>في كل تفصيلة</h1>
+                </div>
+                <div class="animate-item delay-2 w-24 h-1 bg-gradient-to-l from-red-500 to-amber-500 my-6"></div>
+                <div class="animate-item delay-3">
+                    <p class="hero-final-desc">من الحديد الإنشائي إلى أدق تفاصيل التشطيب، نحن نضمن لك مواد بناء تدوم طويلاً وتتحمل أقسى الظروف.</p>
+                </div>
+                <div class="animate-item delay-4 flex flex-wrap gap-4">
+                    <a href="#" class="btn-primary">تواصل معنا</a>
+                    <a href="#" class="btn-secondary">مواقعنا</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dots Navigation -->
+        <div class="hero-final-dots">
+            <div class="hero-final-dot active" onclick="goToSlide(0)"></div>
+            <div class="hero-final-dot" onclick="goToSlide(1)"></div>
+            <div class="hero-final-dot" onclick="goToSlide(2)"></div>
+        </div>
+
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.hero-final-slide');
+        const dots = document.querySelectorAll('.hero-final-dot');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            let next = (currentSlide + 1) % totalSlides;
+            showSlide(next);
+        }
+
+        function goToSlide(index) {
+            showSlide(index);
+            resetTimer();
+        }
+
+        let slideTimer = setInterval(nextSlide, 6000);
+
+        function resetTimer() {
+            clearInterval(slideTimer);
+            slideTimer = setInterval(nextSlide, 6000);
+        }
+    </script>
 
     <style>
-        /* أنماط القسم */
-        .hero-section {
-            font-family: 'Cairo', sans-serif;
+       
 
-        }
-
-        /* الصورة والخلفية */
-        .image-wrapper {
+        /* Unique namespace */
+        .hero-final-wrapper {
             position: relative;
+            height: 800px;
             width: 100%;
-            height: 100vh;
+            overflow: hidden;
+            background-color: #000;
         }
 
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            filter: brightness(0.9);
-        }
-
-        /* تأثير الضباب */
-        .fog-overlay {
+        .hero-final-slide {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg,
-                    rgba(255, 255, 255, 0.08) 0%,
-                    rgba(255, 255, 255, 0.05) 25%,
-                    rgba(255, 255, 255, 0.08) 50%,
-                    rgba(255, 255, 255, 0.05) 75%,
-                    rgba(255, 255, 255, 0.08) 100%);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1.5s ease-in-out, visibility 1.5s;
+            display: flex;
+            align-items: center;
         }
 
-        /* التدرج اللوني على اليمين */
-        .gradient-overlay-right {
+        .hero-final-slide.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 1;
+        }
+
+        .hero-final-bg {
             position: absolute;
             top: 0;
-            right: 0;
-            width: 60%;
+            left: 0;
+            width: 100%;
             height: 100%;
-            background: linear-gradient(to left,
-                    rgba(0, 0, 0, 0.9) 0%,
-                    rgba(0, 0, 0, 0.7) 30%,
-                    rgba(0, 0, 0, 0.5) 50%,
-                    transparent 100%);
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.1);
+            transition: transform 6s linear;
+            /* إضافة تأثير ضباب خفيف مباشرة على الخلفية */
+            filter: blur(2px);
         }
 
-        /* الأنماط المتحركة */
-        @keyframes slideIn {
-            0% {
-                opacity: 0;
-                transform: translateX(100px);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateX(0);
-            }
+        /* طبقة الضباب الإضافية لتكثيف التأثير */
+        .hero-final-fog {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(1px);
+            z-index: 1;
         }
 
-        @keyframes bounceSlow {
-
-            0%,
-            100% {
-                transform: translateY(0);
-            }
-
-            50% {
-                transform: translateY(-10px);
-            }
+        .hero-final-slide.active .hero-final-bg {
+            transform: scale(1);
         }
 
-        .animate-slide-in {
-            animation: slideIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        .hero-final-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 40%, transparent 100%);
+            z-index: 2;
+        }
+
+        .hero-final-content {
+            position: relative;
+            z-index: 3;
+            color: white;
+            width: 100%;
+            max-width: 800px;
+            padding: 0 100px;
+        }
+
+        /* Content Animations - Slide from Right */
+        @keyframes slideFromRight {
+            0% { opacity: 0; transform: translateX(100px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        .animate-item {
             opacity: 0;
         }
 
-        .animate-bounce-slow {
-            animation: bounceSlow 2s infinite;
+        .hero-final-slide.active .animate-item {
+            animation: slideFromRight 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
         }
 
-        /* الأزرار */
+        .delay-1 { animation-delay: 0.2s !important; }
+        .delay-2 { animation-delay: 0.4s !important; }
+        .delay-3 { animation-delay: 0.6s !important; }
+        .delay-4 { animation-delay: 0.8s !important; }
+        .delay-5 { animation-delay: 1.0s !important; }
+        .delay-6 { animation-delay: 1.2s !important; }
+
+        .hero-final-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-final-desc {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            color: #d1d5db;
+            line-height: 1.8;
+        }
+
         .btn-primary {
             background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
             color: white;
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1.1rem;
+            padding: 1rem 2.5rem;
+            border-radius: 0.75rem;
+            font-weight: 700;
             transition: all 0.3s ease;
             box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
-            text-decoration: none;
             display: inline-block;
-            min-width: 200px;
-            text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
-            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.95);
-            color: #1f2937;
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 1.1rem;
+            background-color: transparent;
+            color: white;
+            padding: 1rem 2.5rem;
+            border: 2px solid white;
+            border-radius: 0.75rem;
+            font-weight: 700;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-            text-decoration: none;
             display: inline-block;
-            min-width: 200px;
-            text-align: center;
-            border: 2px solid rgba(255, 255, 255, 0.3);
         }
 
-        .btn-secondary:hover {
-            background: white;
+        .btn-primary:hover, .btn-secondary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            border-color: rgba(220, 38, 38, 0.3);
         }
 
-        /* بطاقات الإحصائيات */
         .stat-card {
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 1rem;
+            border-radius: 1rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 24px 16px;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s ease;
-            overflow: hidden;
         }
 
-        .stat-card:hover {
-            transform: translateY(-5px);
-            background: rgba(0, 0, 0, 0.5);
-            border-color: rgba(220, 38, 38, 0.3);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(to bottom, #f59e0b, #f59e0b);
-            border-radius: 0 16px 16px 0;
-        }
-
-        .stat-icon {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            font-size: 1.5rem;
-            opacity: 0.8;
-        }
-
-        /* مؤشر التمرير */
-        .scroll-indicator {
-            display: inline-block;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .scroll-indicator:hover {
-            transform: scale(1.1);
-        }
-
-        /* تحسينات للجوال */
         @media (max-width: 768px) {
-            .hero-section {
-                min-height: 90vh;
+            .hero-final-title { font-size: 2.5rem; }
+            .hero-final-desc { font-size: 1rem; }
+            .hero-final-overlay {
+                background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%);
             }
-
-            .image-wrapper {
-                height: 90vh;
-            }
-
-            .gradient-overlay-right {
-                width: 100%;
-                background: linear-gradient(to top,
-                        rgba(0, 0, 0, 0.9) 0%,
-                        rgba(0, 0, 0, 0.7) 50%,
-                        transparent 100%);
-            }
-
-            h1 {
-                font-size: 2.5rem !important;
-            }
-
-            .btn-primary,
-            .btn-secondary {
-                min-width: 100%;
-                padding: 14px 24px;
-            }
-
-            .stat-card {
-                padding: 20px 12px;
-            }
+            .hero-final-content { text-align: center; padding: 0 20px; }
+            .hero-final-btns { flex-direction: column; }
         }
 
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2rem !important;
-            }
+        /* Dots */
+        .hero-final-dots {
+            position: absolute;
+            bottom: 40px;
+            right: 5%;
+            z-index: 10;
+            display: flex;
+            gap: 12px;
+        }
 
-            .stat-card {
-                padding: 16px 10px;
-            }
+        .hero-final-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
 
-            .scroll-indicator {
-                right: 50%;
-                transform: translateX(50%);
-            }
+        .hero-final-dot.active {
+            background-color: #dc2626;
+            width: 30px;
+            border-radius: 5px;
         }
     </style>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // تشغيل الأنماط المتحركة
-            function startAnimations() {
-                // تفعيل الأنماط المتحركة للعناصر
-                const animatedElements = document.querySelectorAll('.animate-slide-in');
-                animatedElements.forEach((element, index) => {
-                    setTimeout(() => {
-                        element.style.animationPlayState = 'running';
-                    }, 100 + (index * 50));
-                });
-
-                // تشغيل عدادات الإحصائيات
-                const counters = document.querySelectorAll('.counter');
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            counters.forEach(counter => {
-                                const target = parseInt(counter.getAttribute('data-target'));
-                                const duration = 1500;
-                                const step = target / (duration / 16);
-
-                                let current = 0;
-                                const timer = setInterval(() => {
-                                    current += step;
-                                    if (current >= target) {
-                                        counter.textContent = target;
-                                        clearInterval(timer);
-                                    } else {
-                                        counter.textContent = Math.floor(current);
-                                    }
-                                }, 16);
-                            });
-                        }
-                    });
-                }, { threshold: 0.3 });
-
-                observer.observe(document.querySelector('.hero-section'));
-
-                // إضافة تأثير التمرير السلس
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const targetId = this.getAttribute('href');
-                        if (targetId === '#') return;
-
-                        const targetElement = document.querySelector(targetId);
-                        if (targetElement) {
-                            window.scrollTo({
-                                top: targetElement.offsetTop - 80,
-                                behavior: 'smooth'
-                            });
-                        }
-                    });
-                });
-            }
-
-            // بدء المؤثرات بعد تحميل الصورة
-            const heroImage = document.querySelector('.hero-image');
-            if (heroImage.complete) {
-                startAnimations();
-            } else {
-                heroImage.addEventListener('load', startAnimations);
-                setTimeout(startAnimations, 1000);
-            }
-
-            // تأثيرات إضافية للأزرار
-            document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
-                button.addEventListener('mouseenter', function () {
-                    this.style.transform = 'translateY(-3px) scale(1.02)';
-                });
-
-                button.addEventListener('mouseleave', function () {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-
-            // تأثيرات بطاقات الإحصائيات
-            document.querySelectorAll('.stat-card').forEach(card => {
-                card.addEventListener('mouseenter', function () {
-                    const icon = this.querySelector('.stat-icon i');
-                    if (icon) {
-                        icon.style.transform = 'scale(1.2) rotate(5deg)';
-                        icon.style.transition = 'transform 0.3s ease';
-                    }
-                });
-
-                card.addEventListener('mouseleave', function () {
-                    const icon = this.querySelector('.stat-icon i');
-                    if (icon) {
-                        icon.style.transform = 'scale(1) rotate(0)';
-                    }
-                });
-            });
-        });
-    </script>
 
     <!-- About Section -->
     <section id="about" class="py-16 md:py-24 bg-white">
