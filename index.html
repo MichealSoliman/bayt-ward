@@ -2234,641 +2234,597 @@
  
 
 
-
-    <div class="prod-carousel-wrapper max-w-7xl mx-auto px-4 py-8">
+    <div class="prod-carousel-wrapper max-w-7xl mx-auto px-4 py-16">
 
         <div class="services-header">
             <div class="section-badge">
-                <i class="badge-icon fas fa-hands-helping"></i>
-                <span class="badge-text">ما نقدمه لكم</span>
+                <i class="badge-icon fas fa-box-open"></i>
+                <span class="badge-text">منتجاتنا المتكاملة</span>
             </div>
             <h2 class="section-heading">
-                منتجاتنا <span class="heading-accent">المتميزة</span>
+                منتجات <span class="heading-accent">بيت ورد</span>
             </h2>
             <p class="section-description">
-                نقدم مجموعة متكاملة من المنتجات المميزة
+                نقدم لكم تشكيلة متكاملة من مواد البناء والتشطيب والعوازل بجودة عالية وأسعار منافسة
             </p>
         </div>
-        <!-- Section 1: مواد البناء -->
-        <div class="mb-12">
-            <div class="flex items-center justify-between mb-4">
+
+        <!-- Section 1: مواد العوازل -->
+        <div class="mb-20">
+            <div class="flex items-center justify-between mb-10">
                 <div>
-                    <h2 class="prod-carousel-section-title">مواد البناء</h2>
+                    <h2 class="prod-carousel-section-title">مواد العوازل</h2>
                     <p class="prod-carousel-section-desc">
-                        اختر من مجموعتنا الواسعة من مواد البناء عالية الجودة والمتينة
+                        مواد عازلة عالية الجودة للعزل الحراري والمائي للمباني والمنشآت
                     </p>
                 </div>
-                <div class="flex gap-2">
+                <div class="flex gap-3">
                     <button class="prod-carousel-arrow" id="section1-prev" onclick="scrollCarousel('section1', -1)">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
+                        <i class="fas fa-chevron-right"></i>
                     </button>
                     <button class="prod-carousel-arrow" id="section1-next" onclick="scrollCarousel('section1', 1)">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
+                        <i class="fas fa-chevron-left"></i>
                     </button>
                 </div>
             </div>
 
             <div class="prod-carousel-container overflow-x-auto" id="section1">
-                <div class="flex gap-4">
-                    <!-- Product 1 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.53 PM (1).jpeg" alt="منتج 1"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                <div class="flex gap-6 pb-4">
+                    <!-- لفائف البيتومين -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Bitumen-rolls.webp" 
+                                     alt="لفائف البيتومين"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">أنابيب الحديد المجلفنة قطر 3.5 بوصة
-                                </h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 15.00</p>
-                                 <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">لفائف البيتومين</h3>
+                                <p class="product-description">
+                                    لفائف عازلة للماء بجودة عالية، مقاومة للحرارة والرطوبة. مثالية لعزل الأسطح والأساسات والمباني.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 2 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.54 PM (4).jpeg" alt="منتج 2"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                    <!-- المادة الاسمنتية -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Cementitious-material.jpg" 
+                                     alt="المادة الاسمنتية"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">الطارق أزرق قماش</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 0.75</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">المادة الاسمنتية العازلة</h3>
+                                <p class="product-description">
+                                    مادة اسمنتية عازلة للحرارة والرطوبة، سهلة التطبيق ومقاومة للعوامل الجوية.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 3 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.54 PM.jpeg" alt="منتج 3"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                    <!-- العازل المطاطي -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Rubber-insulator.avif" 
+                                     alt="العازل المطاطي"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">خيوط عازل ومقاوم للرطوبة</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 1.50</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">العازل المطاطي</h3>
+                                <p class="product-description">
+                                    عازل مطاطي مرن ومقاوم للماء، مثالي للأسطح المعرضة للتقلبات الحرارية.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 4 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.53 PM.jpeg" alt="منتج 4"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                    <!-- رول وتر ستوب -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Roll-Water-Stop.webp" 
+                                     alt="رول وتر ستوب"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">خزائن PVC متعددة الاستخدامات</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 100.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">رول وتر ستوب</h3>
+                                <p class="product-description">
+                                    رول عالي الجودة لمنع تسرب المياه في الفواصل الإنشائية والمباني والمنشآت.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 4 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.54 PM (1).jpeg" alt="منتج 4"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                    <!-- لوحة العزل الحراري من البولسترين -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Insulation-panel.avif" 
+                                     alt="لوحة العزل الحراري من البولسترين"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">خزائن PVC متعددة الاستخدامات</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 100.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">لوحة العزل الحراري من البولسترين</h3>
+                                <p class="product-description">
+                                    ألواح عزل حراري ممتازة، توفر عزل حراري فعال وتوفير في استهلاك الطاقة.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 4 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.54 PM (2).jpeg" alt="منتج 4"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                    <!-- الصوف الصخري -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Rock-wool.jpg" 
+                                     alt="الصوف الصخري"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">خزائن PVC متعددة الاستخدامات</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 100.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">الصوف الصخري</h3>
+                                <p class="product-description">
+                                    صوف صخري عازل للحرارة والصوت، مقاوم للحريق والرطوبة، مناسب لجميع الأغراض.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 4 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.54 PM (3).jpeg" alt="منتج 4"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                    <!-- البيتومين (الزفت) -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Bitumen.png" 
+                                     alt="البيتومين (الزفت)"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">خزائن PVC متعددة الاستخدامات</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 100.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">البيتومين (الزفت)</h3>
+                                <p class="product-description">
+                                    بيتومين عالي الجودة للعزل المائي، مقاوم للعوامل الجوية والتآكل والصدا.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
-
 
                 </div>
             </div>
-
-
         </div>
 
-        <!-- Section 2: الحدود والأدوات -->
-        <div class="mb-12">
-            <div class="flex items-center justify-between mb-4">
+        <!-- Section 2: المواد الأخرى -->
+        <div class="mb-20">
+            <div class="flex items-center justify-between mb-10">
                 <div>
-                    <h2 class="prod-carousel-section-title">الحدود والأدوات</h2>
+                    <h2 class="prod-carousel-section-title">المواد الأخرى</h2>
                     <p class="prod-carousel-section-desc">
-                        أدوات احترافية عالية الجودة لجميع احتياجاتك
+                        مواد مساعدة ومكملة لأعمال البناء والتشطيبات بجودة عالية ومواصفات قياسية
                     </p>
                 </div>
-                <div class="flex gap-2">
+                <div class="flex gap-3">
                     <button class="prod-carousel-arrow" id="section2-prev" onclick="scrollCarousel('section2', -1)">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
+                        <i class="fas fa-chevron-right"></i>
                     </button>
                     <button class="prod-carousel-arrow" id="section2-next" onclick="scrollCarousel('section2', 1)">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
+                        <i class="fas fa-chevron-left"></i>
                     </button>
                 </div>
             </div>
 
             <div class="prod-carousel-container overflow-x-auto" id="section2">
-                <div class="flex gap-4">
-                    <!-- Product 1 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.55 PM (1).jpeg" alt="أداة 1"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                <div class="flex gap-6 pb-4">
+                    <!-- الايبوكسي -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Epoxy.webp"" 
+                                     alt="الايبوكسي"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مفك براغي كهربائي احترافي</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 125.00</p>
-                                 <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">الايبوكسي</h3>
+                                <p class="product-description">
+                                    مادة ايبوكسي عالية المقاومة للكيماويات والتآكل، مثالية للأرضيات الصناعية والمخازن.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 2 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.55 PM (2).jpeg" alt="أداة 2"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                    <!-- البرايمر -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Primer.jpg" 
+                                     alt="البرايمر"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مستوى ليزر رقمي</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 65.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">البرايمر</h3>
+                                <p class="product-description">
+                                    برايمر عالي الجودة لتحضير الأسطح قبل الطلاء، يضمن التصاق ممتاز للدهانات.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 3 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.54 PM.jpeg" alt="أداة 3"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                    <!-- البوند -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/The-Bund.jpg" 
+                                     alt="البوند"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">عرض ألومنيوم 2 متر</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 45.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">البوند</h3>
+                                <p class="product-description">
+                                    مادة بوند لتحسين التصاق المونة الأسمنتية، تزيد من متانة الطبقات اللاحقة.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 4 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.55 PM.jpeg" alt="أداة 4"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                    <!-- الواح الفيلر بورد -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Filler-board.webp" 
+                                     alt="الواح الفيلر بورد"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">أداة قياس متعددة الاستخدام</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 75.00</p>
-                                 <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">الواح الفيلر بورد</h3>
+                                <p class="product-description">
+                                    ألواح فيلر بورد عالية الكثافة للأعمال الديكورية والتشطيبات الداخلية.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
+
+                    <!-- فاصل التمدد -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Expansion-separator.webp" 
+                                     alt="فاصل التمدد"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="content-container">
+                                <h3 class="product-title">فاصل التمدد</h3>
+                                <p class="product-description">
+                                    فاصل تمدد مرن لمنع تشققات الخرسانة بسبب التمدد والانكماش الحراري.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- شبك لياسة فايبر -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Fiber-plastering-mesh.jpg" 
+                                     alt="شبك لياسة فايبر"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="content-container">
+                                <h3 class="product-title">شبك لياسة فايبر</h3>
+                                <p class="product-description">
+                                    شبك لياسة من الألياف الزجاجية لتقوية الطبقات ومنع التشققات في اللياسة.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- رول شبك لياسة -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/plastering-mesh-roll.jpeg" 
+                                     alt="رول شبك لياسة"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="content-container">
+                                <h3 class="product-title">رول شبك لياسة</h3>
+                                <p class="product-description">
+                                    رول شبك لياسة سهل التركيب لتقوية الطبقات الأسمنتية في الأرضيات والأسقف.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- منتجات التشطيب سافيتو -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/saveto-2.png" 
+                                     alt="منتجات التشطيب سافيتو"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="content-container">
+                                <h3 class="product-title">منتجات التشطيب سافيتو</h3>
+                                <p class="product-description">
+                                    مجموعة متكاملة من منتجات التشطيب سافيتو بجودة عالية وألوان متنوعة.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- سلك التربيط -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Tie-wire.jpg" 
+                                     alt="سلك التربيط"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
+                                </button>
+                            </div>
+                            <div class="content-container">
+                                <h3 class="product-title">سلك التربيط</h3>
+                                <p class="product-description">
+                                    سلك تربيط حديدي عالي الجودة لربط حديد التسليح في أعمال البناء والإنشاءات.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
-
         </div>
 
-        <!-- Section 3: المواد الصحية -->
-        <div class="mb-12">
-            <div class="flex items-center justify-between mb-4">
+        <!-- Section 3: قسم مواد البناء والتشطيب -->
+        <div class="mb-20">
+            <div class="flex items-center justify-between mb-10">
                 <div>
-                    <h2 class="prod-carousel-section-title">المواد الصحية</h2>
+                    <h2 class="prod-carousel-section-title">قسم مواد البناء والتشطيب</h2>
                     <p class="prod-carousel-section-desc">
-                        منتجات صحية موثوقة لاحتياجاتك المنزلية والتجارية
+                        مواد بناء وتشطيب أساسية لمشاريعك بجودة عالمية وأسعار منافسة وضمان على المنتجات
                     </p>
                 </div>
-                <div class="flex gap-2">
+                <div class="flex gap-3">
                     <button class="prod-carousel-arrow" id="section3-prev" onclick="scrollCarousel('section3', -1)">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
+                        <i class="fas fa-chevron-right"></i>
                     </button>
                     <button class="prod-carousel-arrow" id="section3-next" onclick="scrollCarousel('section3', 1)">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
+                        <i class="fas fa-chevron-left"></i>
                     </button>
                 </div>
             </div>
 
             <div class="prod-carousel-container overflow-x-auto" id="section3">
-                <div class="flex gap-4">
-                    <!-- Product 1 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.56 PM (1).jpeg" alt="منتج صحي 1"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                <div class="flex gap-6 pb-4">
+                    <!-- مواد الاسمنتية -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Cementitious-material.jpg" 
+                                     alt="مواد الاسمنتية"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مضخة ضغط ماء ذكية</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 115.00</p>
-                                 <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">المواد الاسمنتية</h3>
+                                <p class="product-description">
+                                    مجموعة كاملة من المواد الاسمنتية بجميع أنواعها لجميع أعمال البناء والتشطيب.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 2 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.56 PM.jpeg" alt="منتج صحي 2"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                    <!-- دهانات ومواد تشطيب -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Finishing-paints.jpg" 
+                                     alt="دهانات ومواد تشطيب"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مفتاح تحكم رقمي للماء</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 32.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">دهانات ومواد تشطيب</h3>
+                                <p class="product-description">
+                                    تشكيلة واسعة من الدهانات ومواد التشطيب بألوان وجودة متنوعة تناسب جميع الأذواق.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 3 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.55 PM (1).jpeg" alt="منتج صحي 3"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
+                    <!-- جميع مواد فوسام -->
+                    <div class="prod-carousel-item">
+                        <div class="prod-carousel-card">
+                            <div class="image-container">
+                                <img src="./img/Fossam-materials.webp" 
+                                     alt="جميع مواد فوسام"
+                                     class="prod-image">
+                                <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                                    <i class="fas fa-heart"></i>
                                 </button>
                             </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مولد كهربائي ديزل 4 كيلو</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 90.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.09.00 PM.jpeg" alt="منتج صحي 3"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مولد كهربائي ديزل 4 كيلو</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 90.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.59 PM.jpeg" alt="منتج صحي 3"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مولد كهربائي ديزل 4 كيلو</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 90.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.57 PM (2).jpeg" alt="منتج صحي 3"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مولد كهربائي ديزل 4 كيلو</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 90.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.56 PM.jpeg" alt="منتج صحي 3"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مولد كهربائي ديزل 4 كيلو</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 90.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.53 PM (1).jpeg" alt="منتج صحي 3"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مولد كهربائي ديزل 4 كيلو</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 90.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Product 3 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.59 PM.jpeg" alt="منتج صحي 3"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مولد كهربائي ديزل 4 كيلو</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 90.00</p>
-                                <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
+                            <div class="content-container">
+                                <h3 class="product-title">جميع مواد فوسام</h3>
+                                <p class="product-description">
+                                    مجموعة متكاملة من منتجات فوسام للبناء والتشطيبات بجودة عالمية وموثوقة.
+                                </p>
+                                <a href="tel:0568524590" class="prod-carousel-btn">
+                                    <i class="fas fa-phone-alt ml-2"></i>
+                                    اطلب المنتج
                                 </a>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Product 4 -->
-                    <div class="prod-carousel-item w-56">
-                        <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                            <div class="relative bg-gray-100 h-56 flex items-center justify-center">
-                                <img src="./img/WhatsApp Image 2026-01-08 at 5.08.59 PM (1).jpeg" alt="منتج صحي 4"
-                                    class="w-full h-full object-cover">
-                                <button class="absolute top-3 right-3 prod-carousel-heart" onclick="toggleHeart(this)">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path
-                                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-                                        </path>
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="p-4">
-                                <h3 class="font-semibold text-sm text-gray-800 mb-2">مولد كهربائي ديزل 5.5 كيلو</h3>
-                                <p class="prod-carousel-price mb-3">ر.ع 120.00</p>
-                                 <a href="tel:0568524590" class="prod-carousel-btn dark w-full text-center block">
-                                    اطلب الآن
-                                </a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-
-
         </div>
     </div>
 
-    <style>
+    <script>
+        // Scroll carousel with arrow buttons
+        function scrollCarousel(sectionId, direction) {
+            const container = document.getElementById(sectionId);
+            const itemWidth = 320 + 24; // card width + gap
+            const scrollAmount = itemWidth;
+
+            if (direction === 1) {
+                container.scrollLeft += scrollAmount;
+            } else {
+                container.scrollLeft -= scrollAmount;
+            }
+        }
+
+        // Toggle heart/wishlist
+        function toggleHeart(element) {
+            element.classList.toggle('active');
+            if (element.classList.contains('active')) {
+                element.innerHTML = '<i class="fas fa-heart"></i>';
+            } else {
+                element.innerHTML = '<i class="far fa-heart"></i>';
+            }
+        }
+
+        // Enable horizontal scrolling with mouse wheel
+        document.querySelectorAll('.prod-carousel-container').forEach(container => {
+            container.addEventListener('wheel', (e) => {
+                e.preventDefault();
+                container.scrollLeft += e.deltaY;
+            });
+        });
+
+        // Initialize hearts
+        document.querySelectorAll('.prod-carousel-heart').forEach(heart => {
+            heart.innerHTML = '<i class="far fa-heart"></i>';
+        });
+    </script>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+
         /* Unique namespace for product carousel to avoid conflicts */
         .prod-carousel-wrapper {
             direction: rtl;
@@ -2877,185 +2833,261 @@
         .prod-carousel-container {
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
         }
 
         .prod-carousel-item {
             scroll-snap-align: start;
             flex-shrink: 0;
+            height: 500px; /* ارتفاع ثابت لكل الكروت */
+            display: flex;
+            flex-direction: column;
         }
 
-        .prod-carousel-item img {
-            transition: transform 0.3s ease;
+        .prod-carousel-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #f0f0f0;
         }
 
-        .prod-carousel-item:hover img {
+        .prod-carousel-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-container {
+            width: 100%;
+            height: 240px; /* ارتفاع ثابت للصورة */
+            overflow: hidden;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            position: relative;
+        }
+
+        .prod-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .prod-carousel-card:hover .prod-image {
             transform: scale(1.05);
         }
 
-        .prod-carousel-dots {
+        .content-container {
+            padding: 24px;
+            flex: 1;
             display: flex;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-top: 1rem;
+            flex-direction: column;
         }
 
-        .prod-carousel-dot {
-            width: 0.5rem;
-            height: 0.5rem;
-            border-radius: 50%;
-            background-color: #d1d5db;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            height: 3.2rem;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
         }
 
-        .prod-carousel-dot.active {
-            background-color: #991b1b;
-            width: 1.5rem;
-            border-radius: 0.25rem;
-        }
-
-        .prod-carousel-arrow {
-            width: 2.5rem;
-            height: 2.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f5f5f5;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.375rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
+        .product-description {
             color: #6b7280;
-        }
-
-        .prod-carousel-arrow:hover {
-            background-color: #991b1b;
-            color: white;
-            border-color: #991b1b;
-        }
-
-        .prod-carousel-arrow:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-        }
-
-        .prod-carousel-price {
-            color: #991b1b;
-            font-weight: bold;
-            font-size: 1.125rem;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex: 1;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
         }
 
         .prod-carousel-btn {
-            background-color: white;
-            color: #991b1b;
-            border: 2px solid #991b1b;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            border: none;
             cursor: pointer;
             transition: all 0.3s ease;
-            font-weight: 500;
-            font-size: 0.875rem;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            width: 100%;
+            margin-top: auto;
         }
 
         .prod-carousel-btn:hover {
-            background-color: #991b1b;
-            color: white;
-        }
-
-        .prod-carousel-btn.dark {
-            background-color: #991b1b;
-            color: white;
-            border-color: #991b1b;
-        }
-
-        .prod-carousel-btn.dark:hover {
-            background-color: #7f1d1d;
-            border-color: #7f1d1d;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
         }
 
         .prod-carousel-heart {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
+            border: none;
+            color: #9ca3af;
             transition: all 0.3s ease;
-            color: #d1d5db;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .prod-carousel-heart:hover,
         .prod-carousel-heart.active {
-            color: #991b1b;
+            color: #dc2626;
+            background: white;
+            transform: scale(1.1);
+        }
+
+        .prod-carousel-arrow {
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #6b7280;
+            font-size: 1rem;
+        }
+
+        .prod-carousel-arrow:hover {
+            background: #dc2626;
+            color: white;
+            border-color: #dc2626;
+            transform: translateY(-2px);
         }
 
         .prod-carousel-section-title {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 2rem;
+            font-weight: 800;
             color: #1f2937;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .prod-carousel-section-desc {
             color: #6b7280;
-            font-size: 0.875rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 600px;
+        }
+
+        .services-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+            color: #dc2626;
+            padding: 0.75rem 2rem;
+            border-radius: 2rem;
+            font-weight: 700;
             margin-bottom: 1.5rem;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
+        }
+
+        .badge-icon {
+            font-size: 1.1rem;
+        }
+
+        .section-heading {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .heading-accent {
+            color: #dc2626;
+        }
+
+        .section-description {
+            color: #6b7280;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
             line-height: 1.6;
         }
-    </style>
 
-    <script>
-        // Scroll carousel with arrow buttons
-        function scrollCarousel(sectionId, direction) {
-            const container = document.getElementById(sectionId);
-            const itemWidth = 240; // w-56 = 14rem = 224px + gap 16px
-            const scrollAmount = itemWidth + 16;
+        /* Hide scrollbar */
+        .prod-carousel-container::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .prod-carousel-container {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
-            if (direction === 1) {
-                container.scrollLeft += scrollAmount;
-            } else {
-                container.scrollLeft -= scrollAmount;
+        /* Fixed card width for all products */
+        .prod-carousel-item {
+            width: 320px; /* عرض ثابت لكل الكروت */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .prod-carousel-item {
+                width: 280px;
+                height: 480px;
             }
-
-            updateDots(sectionId);
+            
+            .section-heading {
+                font-size: 2.2rem;
+            }
+            
+            .prod-carousel-section-title {
+                font-size: 1.6rem;
+            }
         }
 
-        // Scroll to specific product
-        function scrollToProduct(sectionId, index) {
-            const container = document.getElementById(sectionId);
-            const itemWidth = 240;
-            const scrollAmount = itemWidth * index;
-
-            container.scrollLeft = scrollAmount;
-            updateDots(sectionId);
+        @media (max-width: 480px) {
+            .prod-carousel-item {
+                width: 260px;
+                height: 460px;
+            }
+            
+            .image-container {
+                height: 200px;
+            }
+            
+            .content-container {
+                padding: 20px;
+            }
         }
-
-        // Update active dot indicator
-        function updateDots(sectionId) {
-            const container = document.getElementById(sectionId);
-            const dots = document.querySelectorAll(`#${sectionId}-dots .prod-carousel-dot`);
-            const itemWidth = 240;
-
-            const scrollPosition = container.scrollLeft;
-            const activeIndex = Math.round(scrollPosition / itemWidth);
-
-            dots.forEach((dot, index) => {
-                if (index === activeIndex) {
-                    dot.classList.add('active');
-                } else {
-                    dot.classList.remove('active');
-                }
-            });
-        }
-
-        // Toggle heart/wishlist
-        function toggleHeart(element) {
-            element.classList.toggle('active');
-        }
-
-        // Initialize dots on scroll
-        document.querySelectorAll('.prod-carousel-container').forEach(container => {
-            container.addEventListener('scroll', () => {
-                const sectionId = container.id;
-                updateDots(sectionId);
-            });
-        });
-    </script>
+    </style>
 
 
     <section class="final-stats-section py-20 px-4 border-t border-gray-50">
