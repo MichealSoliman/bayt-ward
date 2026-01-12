@@ -7,7 +7,7 @@
     <title>بيت ورد - لمواد البناء والعزل</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
+<style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
 
         body {
@@ -52,7 +52,6 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -87,7 +86,6 @@
             from {
                 opacity: 0;
             }
-
             to {
                 opacity: 1;
             }
@@ -109,7 +107,6 @@
                 opacity: 0;
                 transform: translateY(50px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -371,217 +368,133 @@
                 </button>
             </div>
 
-            <!-- Desktop Navigation Menu -->
+            <!-- Desktop Navigation Menu - القائمة المعدلة -->
             <nav class="hidden md:block border-t border-gray-200">
                 <ul class="flex items-center justify-center gap-6 lg:gap-8 py-4 text-sm font-medium">
-                    <!-- Menu Item 1 -->
+                    <!-- Menu Item 1 - مواد العوازل -->
                     <li class="dropdown relative group">
                         <a href="#"
                             class="category-link hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
-                            المعادن والحديد الإنشائي
+                            مواد العوازل
                             <i class="fas fa-chevron-down text-xs"></i>
                         </a>
-                        <div
-                            class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2 z-50">
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="steel_rebar">
-                                <i class="fas fa-bolt ml-2"></i>
-                                حديد التسليح
+                        <div class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2 z-50">
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="bitumen_rolls">
+                                <i class="fas fa-roll-paper ml-2"></i>
+                                لفائف البيتومين
                             </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="metal_sheets">
-                                <i class="fas fa-th-large ml-2"></i>
-                                الصاج والألواح المعدنية
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="cement_material">
+                                <i class="fas fa-cube ml-2"></i>
+                                المادة الاسمنتية
                             </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="steel_pipes">
-                                <i class="fas fa-pipe ml-2"></i>
-                                المواسير الحديدية
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="rubber_insulation">
+                                <i class="fas fa-tire ml-2"></i>
+                                العازل المطاطي
                             </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="steel_mesh">
-                                <i class="fas fa-th ml-2"></i>
-                                الشبك الحديدي
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="steel_angles">
-                                <i class="fas fa-angle-right ml-2"></i>
-                                الزوايا والقطاعات
-                            </a>
-                        </div>
-                    </li>
-
-                   
-
-                    <!-- Menu Item 3 -->
-                    <li class="dropdown relative group">
-                        <a href="#"
-                            class="category-link hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
-                            الكهرباء والإنارة
-                            <i class="fas fa-chevron-down text-xs"></i>
-                        </a>
-                        <div
-                            class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2 z-50">
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="cables">
-                                <i class="fas fa-bolt ml-2"></i>
-                                الكابلات والأسلاك
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="electrical_panels">
-                                <i class="fas fa-sitemap ml-2"></i>
-                                اللوحات الكهربائية
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="led_lights">
-                                <i class="fas fa-lightbulb ml-2"></i>
-                                وحدات الإنارة LED
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="switches">
-                                <i class="fas fa-toggle-on ml-2"></i>
-                                المفاتيح والمقابس
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="protection_systems">
-                                <i class="fas fa-shield-alt ml-2"></i>
-                                أنظمة الحماية
-                            </a>
-                        </div>
-                    </li>
-
-                    <!-- Menu Item 4 -->
-                    <li class="dropdown relative group">
-                        <a href="#"
-                            class="category-link hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
-                            مواد البناء وعوازل الموقع
-                            <i class="fas fa-chevron-down text-xs"></i>
-                        </a>
-                        <div
-                            class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2 z-50">
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="cement">
-                                <i class="fas fa-cubes ml-2"></i>
-                                الأسمنت والجبس
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="bricks">
-                                <i class="fas fa-square ml-2"></i>
-                                الطوب والبلوك
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="insulation">
-                                <i class="fas fa-fire ml-2"></i>
-                                العوازل المائية والحرارية
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="tiles">
-                                <i class="fas fa-gem ml-2"></i>
-                                البلاط والسيراميك
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="paint">
-                                <i class="fas fa-paint-roller ml-2"></i>
-                                الدهانات والطلاء
-                            </a>
-                        </div>
-                    </li>
-
-                    <!-- Menu Item 5 -->
-                    <li class="dropdown relative group">
-                        <a href="#"
-                            class="category-link hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
-                            السباكة والمياه
-                            <i class="fas fa-chevron-down text-xs"></i>
-                        </a>
-                        <div
-                            class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2 z-50">
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="pvc_pipes">
-                                <i class="fas fa-pipe ml-2"></i>
-                                مواسير PVC
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="faucets">
-                                <i class="fas fa-faucet ml-2"></i>
-                                الخلاطات والحنفيات
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="water_tanks">
-                                <i class="fas fa-tint ml-2"></i>
-                                خزانات المياه
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="toilets">
-                                <i class="fas fa-toilet ml-2"></i>
-                                المراحيض والأحواض
-                            </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="water_pumps">
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="water_stop">
                                 <i class="fas fa-water ml-2"></i>
-                                مضخات المياه
+                                رول وتر ستوب
+                            </a>
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="polystyrene">
+                                <i class="fas fa-th-large ml-2"></i>
+                                لوحة العزل الحراري من البولسترين
+                            </a>
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="rock_wool">
+                                <i class="fas fa-mountain ml-2"></i>
+                                الصوف الصخري
+                            </a>
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="bitumen">
+                                <i class="fas fa-oil-can ml-2"></i>
+                                البيتومين (الزفت)
                             </a>
                         </div>
                     </li>
 
-                    <!-- Menu Item 6 -->
+                    <!-- Menu Item 2 - المواد الأخرى -->
                     <li class="dropdown relative group">
                         <a href="#"
                             class="category-link hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
-                            العدد والأدوات
+                            المواد الأخرى
                             <i class="fas fa-chevron-down text-xs"></i>
                         </a>
-                        <div
-                            class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2 z-50">
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="electric_tools">
-                                <i class="fas fa-tools ml-2"></i>
-                                الأدوات الكهربائية
+                        <div class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2 z-50">
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="epoxy">
+                                <i class="fas fa-flask ml-2"></i>
+                                الايبوكسي
                             </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="measurement_tools">
-                                <i class="fas fa-ruler ml-2"></i>
-                                أدوات القياس
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="primer">
+                                <i class="fas fa-paint-roller ml-2"></i>
+                                البرايمر
                             </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="hand_tools">
-                                <i class="fas fa-hammer ml-2"></i>
-                                العدد اليدوية
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="bond">
+                                <i class="fas fa-glue ml-2"></i>
+                                البوند
                             </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="safety_equipment">
-                                <i class="fas fa-hard-hat ml-2"></i>
-                                معدات السلامة
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="filler_board">
+                                <i class="fas fa-clipboard ml-2"></i>
+                                الواح الفيلر بورد
                             </a>
-                            <a href="#"
-                                class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
-                                data-product="ladders">
-                                <i class="fas fa-ladder ml-2"></i>
-                                السلالم والسقالات
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="expansion_joint">
+                                <i class="fas fa-expand-alt ml-2"></i>
+                                فاصل التمدد
+                            </a>
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="fiber_mesh">
+                                <i class="fas fa-th ml-2"></i>
+                                شبك لياسة فايبر
+                            </a>
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="roll_mesh">
+                                <i class="fas fa-roll-paper ml-2"></i>
+                                رول شبك لياسة
+                            </a>
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="saveto">
+                                <i class="fas fa-paint-brush ml-2"></i>
+                                منتجات التشطيب سافيتو
+                            </a>
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="binding_wire">
+                                <i class="fas fa-wire ml-2"></i>
+                                سلك التربيط
+                            </a>
+                        </div>
+                    </li>
+
+                    <!-- Menu Item 3 - قسم مواد البناء والتشطيب -->
+                    <li class="dropdown relative group">
+                        <a href="#"
+                            class="category-link hover:text-red-700 cursor-pointer flex items-center gap-1 py-2">
+                            قسم مواد البناء والتشطيب
+                            <i class="fas fa-chevron-down text-xs"></i>
+                        </a>
+                        <div class="dropdown-menu absolute top-full right-0 bg-white shadow-lg rounded-lg mt-2 w-64 py-2 z-50">
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="cement_materials">
+                                <i class="fas fa-cubes ml-2"></i>
+                                المواد الاسمنتية
+                            </a>
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="paints_finishes">
+                                <i class="fas fa-paint-brush ml-2"></i>
+                                دهانات ومواد تشطيب
+                            </a>
+                            <a href="#" class="product-link block px-4 py-3 hover:bg-red-50 hover:text-red-700 transition"
+                                data-product="fosam">
+                                <i class="fas fa-building ml-2"></i>
+                                جميع مواد فوسام
                             </a>
                         </div>
                     </li>
@@ -605,159 +518,78 @@
                 </button>
             </div>
 
-            <!-- Search Bar Mobile -->
-            <div class="mb-6">
-                <div class="relative">
-                    <input type="text" placeholder="ابحث في المتجر..."
-                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" />
-                    <button class="absolute left-2 top-1/2 -translate-y-1/2 text-red-700">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Menu Items -->
+            <!-- Mobile Menu Items المعدلة -->
             <div class="space-y-2">
-                <!-- Menu Item 1 -->
+                <!-- مواد العوازل -->
                 <div class="border-b border-gray-200">
                     <button
                         class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
-                        <span>المعادن والحديد الإنشائي</span>
+                        <span>مواد العوازل</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="steel_rebar">حديد التسليح</a>
+                            data-product="bitumen_rolls">لفائف البيتومين</a>
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="metal_sheets">الصاج والألواح المعدنية</a>
+                            data-product="cement_material">المادة الاسمنتية</a>
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="steel_pipes">المواسير الحديدية</a>
+                            data-product="rubber_insulation">العازل المطاطي</a>
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="steel_mesh">الشبك الحديدي</a>
+                            data-product="water_stop">رول وتر ستوب</a>
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="steel_angles">الزوايا والقطاعات</a>
+                            data-product="polystyrene">لوحة العزل الحراري من البولسترين</a>
+                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
+                            data-product="rock_wool">الصوف الصخري</a>
+                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
+                            data-product="bitumen">البيتومين (الزفت)</a>
                     </div>
                 </div>
 
-                <!-- Menu Item 2 -->
+                <!-- المواد الأخرى -->
                 <div class="border-b border-gray-200">
                     <button
                         class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
-                        <span>الأخشاب والمنتجات الخشبية</span>
+                        <span>المواد الأخرى</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="plywood">خشب الكونتر</a>
+                            data-product="epoxy">الايبوكسي</a>
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="mdf">خشب MDF</a>
+                            data-product="primer">البرايمر</a>
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="wood_boards">الألواح الخشبية</a>
+                            data-product="bond">البوند</a>
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="wood_doors">الأبواب الخشبية</a>
+                            data-product="filler_board">الواح الفيلر بورد</a>
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="flooring">الباركيه والأرضيات</a>
+                            data-product="expansion_joint">فاصل التمدد</a>
+                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
+                            data-product="fiber_mesh">شبك لياسة فايبر</a>
+                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
+                            data-product="roll_mesh">رول شبك لياسة</a>
+                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
+                            data-product="saveto">منتجات التشطيب سافيتو</a>
+                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
+                            data-product="binding_wire">سلك التربيط</a>
                     </div>
                 </div>
 
-                <!-- Menu Item 3 -->
+                <!-- قسم مواد البناء والتشطيب -->
                 <div class="border-b border-gray-200">
                     <button
                         class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
-                        <span>الكهرباء والإنارة</span>
+                        <span>قسم مواد البناء والتشطيب</span>
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
                     <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="cables">الكابلات والأسلاك</a>
+                            data-product="cement_materials">المواد الاسمنتية</a>
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="electrical_panels">اللوحات الكهربائية</a>
+                            data-product="paints_finishes">دهانات ومواد تشطيب</a>
                         <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="led_lights">وحدات الإنارة LED</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="switches">المفاتيح والمقابس</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="protection_systems">أنظمة الحماية</a>
+                            data-product="fosam">جميع مواد فوسام</a>
                     </div>
                 </div>
-
-                <!-- Menu Item 4 -->
-                <div class="border-b border-gray-200">
-                    <button
-                        class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
-                        <span>مواد البناء وعوازل الموقع</span>
-                        <i class="fas fa-chevron-down transition-transform"></i>
-                    </button>
-                    <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="cement">الأسمنت والجبس</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="bricks">الطوب والبلوك</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="insulation">العوازل المائية والحرارية</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="tiles">البلاط والسيراميك</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="paint">الدهانات والطلاء</a>
-                    </div>
-                </div>
-
-                <!-- Menu Item 5 -->
-                <div class="border-b border-gray-200">
-                    <button
-                        class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
-                        <span>السباكة والمياه</span>
-                        <i class="fas fa-chevron-down transition-transform"></i>
-                    </button>
-                    <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="pvc_pipes">مواسير PVC</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="faucets">الخلاطات والحنفيات</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="water_tanks">خزانات المياه</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="toilets">المراحيض والأحواض</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="water_pumps">مضخات المياه</a>
-                    </div>
-                </div>
-
-                <!-- Menu Item 6 -->
-                <div class="border-b border-gray-200">
-                    <button
-                        class="mobile-dropdown-btn w-full flex justify-between items-center py-3 text-right font-medium hover:text-red-700">
-                        <span>العدد والأدوات</span>
-                        <i class="fas fa-chevron-down transition-transform"></i>
-                    </button>
-                    <div class="mobile-dropdown-content hidden pr-4 pb-3 space-y-2">
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="electric_tools">الأدوات الكهربائية</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="measurement_tools">أدوات القياس</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="hand_tools">العدد اليدوية</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="safety_equipment">معدات السلامة</a>
-                        <a href="#" class="product-link block py-2 text-gray-600 hover:text-red-700"
-                            data-product="ladders">السلالم والسقالات</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mobile Menu Footer -->
-            <div class="mt-6 pt-6 border-t border-gray-200 flex justify-center gap-4">
-                <button class="text-gray-700 hover:text-red-700 text-xl">
-                    <i class="fas fa-heart"></i>
-                </button>
-                <button class="text-gray-700 hover:text-red-700 text-xl">
-                    <i class="fas fa-user"></i>
-                </button>
-                <button class="text-gray-700 hover:text-red-700 text-xl relative">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span
-                        class="absolute -top-2 -right-2 bg-red-700 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">3</span>
-                </button>
             </div>
         </div>
     </div>
@@ -814,787 +646,203 @@
         </div>
     </div>
 
-        <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
-
-        body {
-            font-family: 'Cairo', sans-serif;
-        }
-
-        .hero-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
-                url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2000');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        /* Dropdown Animation */
-        .dropdown-menu {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
-        }
-
-        .dropdown:hover .dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-
-        /* Mobile Menu Animation */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease;
-        }
-
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
-
-        /* Fade In Animation */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 0.8s ease forwards;
-        }
-
-        /* Lightbox Styles - Mobile Optimized */
-        .lightbox-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 9999;
-            backdrop-filter: blur(5px);
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        .lightbox-overlay.active {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            overflow-y: auto;
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .lightbox-container {
-            background: white;
-            border-radius: 15px;
-            width: 100%;
-            max-width: 500px;
-            margin: auto;
-            position: relative;
-            animation: slideUp 0.4s ease;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-        }
-
-        @media (min-width: 768px) {
-            .lightbox-container {
-                max-width: 900px;
-                width: 95%;
-            }
-        }
-
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: rgba(255, 255, 255, 0.95);
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 100;
-            color: #1f2937;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        @media (max-width: 767px) {
-            .lightbox-close {
-                top: 10px;
-                left: 10px;
-                width: 35px;
-                height: 35px;
-            }
-        }
-
-        .lightbox-close:hover {
-            background: white;
-            transform: rotate(90deg);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .lightbox-content {
-            display: flex;
-            flex-direction: column;
-        }
-
-        @media (min-width: 768px) {
-            .lightbox-content {
-                flex-direction: row;
-                min-height: 500px;
-            }
-        }
-
-        .lightbox-image-container {
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-            background: #f5f5f5;
-        }
-
-        @media (min-width: 768px) {
-            .lightbox-image-container {
-                width: 50%;
-                height: auto;
-                min-height: 500px;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .lightbox-image-container {
-                height: 200px;
-            }
-        }
-
-        .lightbox-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .lightbox-info {
-            padding: 20px;
-            width: 100%;
-            overflow-y: auto;
-            max-height: 60vh;
-        }
-
-        @media (min-width: 768px) {
-            .lightbox-info {
-                width: 50%;
-                max-height: 500px;
-                padding: 30px;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .lightbox-info {
-                max-height: calc(100vh - 250px - 50px);
-                padding: 15px;
-            }
-        }
-
-        .lightbox-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #dc2626;
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-
-        @media (min-width: 768px) {
-            .lightbox-title {
-                font-size: 1.8rem;
-            }
-        }
-
-        .lightbox-description {
-            color: #6b7280;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        @media (min-width: 768px) {
-            .lightbox-description {
-                font-size: 1.1rem;
-            }
-        }
-
-        .product-specs {
-            background: #f9fafb;
-            border-radius: 10px;
-            padding: 15px;
-            margin: 15px 0;
-        }
-
-        @media (max-width: 767px) {
-            .product-specs {
-                padding: 12px;
-                margin: 12px 0;
-            }
-        }
-
-        .spec-item {
-            display: flex;
-            flex-direction: column;
-            padding: 6px 0;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        @media (min-width: 640px) {
-            .spec-item {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-        }
-
-        .spec-item:last-child {
-            border-bottom: none;
-        }
-
-        .spec-label {
-            font-weight: 600;
-            color: #4b5563;
-            font-size: 0.9rem;
-            margin-bottom: 2px;
-        }
-
-        .spec-value {
-            color: #1f2937;
-            font-size: 0.9rem;
-            text-align: left;
-        }
-
-        @media (min-width: 640px) {
-            .spec-value {
-                text-align: right;
-            }
-        }
-
-        .product-actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        @media (min-width: 640px) {
-            .product-actions {
-                flex-direction: row;
-            }
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            flex: 1;
-            transition: all 0.3s ease;
-            text-align: center;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-size: 0.95rem;
-        }
-
-        @media (min-width: 640px) {
-            .btn-primary {
-                font-size: 1rem;
-            }
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.3);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #dc2626;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-weight: 600;
-            border: 2px solid #dc2626;
-            cursor: pointer;
-            flex: 1;
-            transition: all 0.3s ease;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-size: 0.95rem;
-        }
-
-        @media (min-width: 640px) {
-            .btn-secondary {
-                font-size: 1rem;
-            }
-        }
-
-        .btn-secondary:hover {
-            background: #fef2f2;
-            transform: translateY(-2px);
-        }
-
-        /* Overlay Menu Background */
-        .menu-overlay {
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .menu-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Product Category Styles */
-        .category-link {
-            position: relative;
-            cursor: pointer;
-        }
-
-        .category-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            right: 0;
-            width: 0;
-            height: 2px;
-            background: #dc2626;
-            transition: width 0.3s ease;
-        }
-
-        .category-link:hover::after {
-            width: 100%;
-        }
-
-        /* Product Link Styles */
-        .product-link {
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .product-link:hover {
-            background: #fef2f2 !important;
-            transform: translateX(-5px);
-        }
-
-        /* Mobile Responsive Enhancements */
-        @media (max-width: 767px) {
-            .hero-bg {
-                background-attachment: scroll !important;
-            }
-            
-            /* تحسين قابلية القراءة على الشاشات الصغيرة */
-            .lightbox-info {
-                font-size: 0.9rem;
-            }
-            
-            .spec-item {
-                padding: 4px 0;
-            }
-            
-            .btn-primary, .btn-secondary {
-                padding: 10px 16px;
-            }
-        }
-
-        /* تحسين التجربة على الشاشات الصغيرة جداً */
-        @media (max-width: 400px) {
-            .lightbox-container {
-                margin: 5px;
-                border-radius: 12px;
-            }
-            
-            .lightbox-info {
-                padding: 12px;
-            }
-            
-            .lightbox-title {
-                font-size: 1.3rem;
-            }
-            
-            .product-specs {
-                padding: 10px;
-            }
-        }
-
-        /* تحسين التمرير على الجوال */
-        .lightbox-info::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        .lightbox-info::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-
-        .lightbox-info::-webkit-scrollbar-thumb {
-            background: #dc2626;
-            border-radius: 10px;
-        }
-
-        /* إضافة تأثير عند فتح Lightbox */
-        body.lightbox-open {
-            overflow: hidden;
-        }
-    </style>
-
-    <!-- JavaScript -->
     <script>
-        // بيانات المنتجات الكاملة لكل الروابط
+        // بيانات المنتجات المعدلة حسب طلبك
         const productsData = {
-            // المعادن والحديد الإنشائي
-            steel_rebar: {
-                title: "حديد التسليح",
-                description: "حديد تسليح عالي الجودة بمواصفات عالمية. يتمتع بمتانة وقوة تحمل عالية مع مقاومة ممتازة للصدأ والتآكل. مثالي لجميع أنواع المشاريع الإنشائية والمباني السكنية والتجارية.",
-                category: "المعادن والحديد الإنشائي",
-                specs: "أقطار من 6مم إلى 32مم، جودة 60، مقاومة عالية للانحناء",
-                applications: "الأعمدة الخرسانية، الأسقف، الأساسات، الجدران الاستنادية",
-                quality: "مطابق للمواصفات السعودية والعالمية",
-                price: "يبدأ من 2,500 ريال/طن",
-                image: "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            // مواد العوازل
+            bitumen_rolls: {
+                title: "لفائف البيتومين",
+                description: "لفائف بيتومين عازلة للماء بجودة عالية ومقاومة للحرارة والرطوبة. مثالية لعزل الأسطح والأساسات.",
+                category: "مواد العوازل",
+                specs: "سمك 3-4 مم، عرض 1م، طول 10م، مقاومة عالية",
+                applications: "عزل الأسطح، الأساسات، الحمامات، المسابح",
+                quality: "مطابقة للمواصفات العالمية",
+                price: "يبدأ من 85 ريال/رول",
+                image: "./img/Bitumen-rolls.webp"
             },
-            metal_sheets: {
-                title: "الصاج والألواح المعدنية",
-                description: "ألواح صاج عالية الجودة بسمكات مختلفة، مقاومة للتآكل والصدا. مثالية لأعمال التكسية والتشطيبات المعدنية في المباني والمشاريع الصناعية.",
-                category: "المعادن والحديد الإنشائي",
-                specs: "سمكات من 0.5مم إلى 3مم، مقاسات قياسية، معالجة ضد الصدأ",
-                applications: "التكسية الخارجية، الأسقف المعلقة، واجهات المباني",
-                quality: "جودة صناعية عالية",
-                price: "يبدأ من 1,200 ريال/لوح",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            cement_material: {
+                title: "المادة الاسمنتية",
+                description: "مادة اسمنتية عازلة للحرارة والرطوبة بجودة عالية وسهلة التطبيق.",
+                category: "مواد العوازل",
+                specs: "تعبئة 25 كجم، وقت جفاف 24 ساعة، مقاوم للماء",
+                applications: "عزل الحمامات، المسابح، الخزانات",
+                quality: "عالية المقاومة للرطوبة",
+                price: "يبدأ من 45 ريال/كيس",
+                image: "./img/Cementitious-material.jpg"
             },
-            steel_pipes: {
-                title: "المواسير الحديدية",
-                description: "مواسير حديدية بجودة عالية لمختلف الأغراض الإنشائية والصناعية. مقاومة للضغط والعوامل الجوية مع عمر افتراضي طويل.",
-                category: "المعادن والحديد الإنشائي",
-                specs: "أقطار من 1/2 بوصة إلى 12 بوصة، سمكات مختلفة",
-                applications: "أنظمة الري، شبكات المياه، الهياكل الإنشائية",
-                quality: "مقاومة للصدأ والتآكل",
-                price: "يبدأ من 800 ريال/طن",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            steel_mesh: {
-                title: "الشبك الحديدي",
-                description: "شبك حديدي مقوى لمتانة الخرسانة ومنع التشققات. يوفر قوة شد عالية وتماسك ممتاز مع الخرسانة.",
-                category: "المعادن والحديد الإنشائي",
-                specs: "مقاسات شبكة 10×10 سم، 15×15 سم، سماكات مختلفة",
-                applications: "الأرضيات الخرسانية، الطرق، الأسقف",
-                quality: "مقاوم للشد والانحناء",
-                price: "يبدأ من 1,500 ريال/طن",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            steel_angles: {
-                title: "الزوايا والقطاعات",
-                description: "زوايا حديدية وقطاعات متنوعة للأعمال الإنشائية والديكورية. توفر دعماً قوياً ومظهراً أنيقاً للمشاريع.",
-                category: "المعادن والحديد الإنشائي",
-                specs: "زوايا متساوية وغير متساوية، مقاسات متنوعة",
-                applications: "الهياكل الحديدية، الديكورات، الدعائم",
-                quality: "مقاومة للانحناء والاهتزاز",
-                price: "يبدأ من 1,800 ريال/طن",
-                image: "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-
-            // الأخشاب والمنتجات الخشبية
-            plywood: {
-                title: "خشب الكونتر",
-                description: "ألواح كونتر عالية الجودة بأحجام وسماكات متنوعة. مثالية للأعمال الخشبية والديكورات الداخلية.",
-                category: "الأخشاب والمنتجات الخشبية",
-                specs: "سماكات من 3مم إلى 18مم، مقاسات قياسية",
-                applications: "الديكورات، الأثاث، الأبواب الداخلية",
-                quality: "مقاوم للتشوه والرطوبة",
-                price: "يبدأ من 150 ريال/لوح",
-                image: "https://images.unsplash.com/photo-1599159340657-e4d4c8b7f08e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            mdf: {
-                title: "خشب MDF",
-                description: "ألواح MDF عالية الكثافة وسهلة التشكيل والتشغيل. مثالية للأعمال الديكورية الدقيقة.",
-                category: "الأخشاب والمنتجات الخشبية",
-                specs: "كثافة عالية، سطح أملس، سماكات متنوعة",
-                applications: "الديكورات، الأثاث المكتبي، المشغولات الخشبية",
-                quality: "سهل القص والتشكيل",
-                price: "يبدأ من 200 ريال/لوح",
-                image: "https://images.unsplash.com/photo-1599159340657-e4d4c8b7f08e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            wood_boards: {
-                title: "الألواح الخشبية",
-                description: "ألواح خشب طبيعي بجودة عالية ومقاسات متنوعة. مثالية للأعمال الإنشائية والديكورية.",
-                category: "الأخشاب والمنتجات الخشبية",
-                specs: "أخشاب صنوبر، أرز، خشب صلب، سماكات متنوعة",
-                applications: "الهياكل الخشبية، الديكورات، الأرضيات",
-                quality: "معالجة ضد الحشرات والرطوبة",
-                price: "يبدأ من 300 ريال/لوح",
-                image: "https://images.unsplash.com/photo-1599159340657-e4d4c8b7f08e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            wood_doors: {
-                title: "الأبواب الخشبية",
-                description: "أبواب خشبية عالية الجودة بتصاميم متنوعة تناسب جميع الأذواق والميزانيات.",
-                category: "الأخشاب والمنتجات الخشبية",
-                specs: "تصاميم كلاسيكية وعصرية، عازلة للصوت",
-                applications: "الأبواب الداخلية والخارجية، أبواب المداخل",
-                quality: "مقاومة للتشقق والتلف",
-                price: "يبدأ من 800 ريال/باب",
-                image: "https://images.unsplash.com/photo-1599159340657-e4d4c8b7f08e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            flooring: {
-                title: "الباركيه والأرضيات",
-                description: "أرضيات باركيه خشبية وأرضيات HDF بألوان وتصاميم متنوعة. تضيف جمالاً وأناقة لأي مكان.",
-                category: "الأخشاب والمنتجات الخشبية",
-                specs: "سهلة التركيب، مقاومة للخدوش، عازلة للصوت",
-                applications: "الأرضيات الداخلية، غرف النوم، الصالات",
-                quality: "مقاومة للرطوبة والتآكل",
+            rubber_insulation: {
+                title: "العازل المطاطي",
+                description: "عازل مطاطي مرن ومقاوم للماء والعوامل الجوية. مثالي للأسطح المعرضة للتقلبات الحرارية.",
+                category: "مواد العوازل",
+                specs: "مرن 100%، مقاوم للأشعة فوق البنفسجية، سمك 2مم",
+                applications: "الأسطح المعدنية، الأنابيب، الخزانات",
+                quality: "عمر افتراضي طويل",
                 price: "يبدأ من 120 ريال/م²",
-                image: "https://images.unsplash.com/photo-1599159340657-e4d4c8b7f08e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                image: "./img/Rubber-insulator.avif"
+            },
+            water_stop: {
+                title: "رول وتر ستوب",
+                description: "رول وتر ستوب عالي الجودة لمنع تسرب المياه في الفواصل الإنشائية.",
+                category: "مواد العوازل",
+                specs: "عرض 30 سم، طول 10م، مقاوم للضغط المائي",
+                applications: "فواصل الخرسانة، الأساسات، الجدران الاستنادية",
+                quality: "مقاوم للتحلل الكيميائي",
+                price: "يبدأ من 150 ريال/رول",
+                image: "./img/Roll-Water-Stop.webp"
+            },
+            polystyrene: {
+                title: "لوحة العزل الحراري من البولسترين",
+                description: "ألواح عزل حراري من مادة البولسترين الممدد. توفر عزل حراري ممتاز وتوفير في الطاقة.",
+                category: "مواد العوازل",
+                specs: "سمك 5-10 سم، كثافة 15-25 كجم/م³، مقاوم للحريق",
+                applications: "عزل الجدران، الأسقف، الأرضيات",
+                quality: "معامل توصيل حراري منخفض",
+                price: "يبدأ من 65 ريال/م²",
+                image: "./img/Insulation-panel.avif"
+            },
+            rock_wool: {
+                title: "الصوف الصخري",
+                description: "صوف صخري عازل للحرارة والصوت بجودة عالية. مقاوم للحريق والرطوبة.",
+                category: "مواد العوازل",
+                specs: "كثافة 40-120 كجم/م³، مقاومة حريق حتى 1000°م",
+                applications: "عزل الأسقف، الجدران، الأنابيب، الغرف الباردة",
+                quality: "عازل حراري وصوتي ممتاز",
+                price: "يبدأ من 55 ريال/م²",
+                image: "./img/Rock-wool.jpg"
+            },
+            bitumen: {
+                title: "البيتومين (الزفت)",
+                description: "بيتومين عالي الجودة لأعمال العزل المائي. مقاوم للعوامل الجوية والتآكل.",
+                category: "مواد العوازل",
+                specs: "درجة ليونة 40/50، 60/70، مقاوم للماء والأملاح",
+                applications: "عزل الأسطح، الطرق، الخزانات، الأساسات",
+                quality: "جودة تصدير عالية",
+                price: "يبدأ من 900 ريال/طن",
+                image: "./img/Bitumen.png"
             },
 
-            // الكهرباء والإنارة
-            cables: {
-                title: "الكابلات والأسلاك",
-                description: "كابلات وأسلاك كهربائية بجودة عالية ومواصفات أمان عالمية. مناسبة للاستخدامات السكنية والتجارية والصناعية.",
-                category: "الكهرباء والإنارة",
-                specs: "مقاسات متنوعة (1.5مم - 240مم)، عازل PVC، مقاوم للحرارة",
-                applications: "التوصيلات الكهربائية، الشبكات، الإنارة",
-                quality: "مطابقة للمواصفات السعودية (SASO)",
-                price: "يبدأ من 50 ريال/متر",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            // المواد الأخرى
+            epoxy: {
+                title: "الايبوكسي",
+                description: "مادة ايبوكسي عالية المقاومة للكيماويات والتآكل. مثالية للأرضيات الصناعية.",
+                category: "المواد الأخرى",
+                specs: "مقاومة كيميائية عالية، صلابة ممتازة، سطح أملس",
+                applications: "أرضيات المصانع، المستشفيات، المرائب",
+                quality: "مقاوم للصدمات والاحتكاك",
+                price: "يبدأ من 110 ريال/كجم",
+                image: "./img/Epoxy.webp"
             },
-            electrical_panels: {
-                title: "اللوحات الكهربائية",
-                description: "لوحات كهربائية بجودة عالية مع قواطع حماية متعددة. تضمن توزيع آمن وكفء للطاقة الكهربائية.",
-                category: "الكهرباء والإنارة",
-                specs: "أحجام متنوعة، قواطع MCB، RCCB، نظام تأريض",
-                applications: "المباني السكنية، المجمعات التجارية، المصانع",
-                quality: "مقاومة للحريق، معتمدة عالمياً",
-                price: "يبدأ من 800 ريال/لوحة",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            primer: {
+                title: "البرايمر",
+                description: "برايمر عالي الجودة لتحضير الأسطح قبل الطلاء. يضمن التصاق ممتاز للدهانات.",
+                category: "المواد الأخرى",
+                specs: "تغطية 10-12 م²/لتر، وقت جفاف 2-4 ساعات",
+                applications: "الأسطح الخرسانية، المعدنية، الخشبية",
+                quality: "مقاوم للقلوية والرطوبة",
+                price: "يبدأ من 75 ريال/جالون",
+                image: "./img/Primer.jpg"
             },
-            led_lights: {
-                title: "وحدات الإنارة LED",
-                description: "وحدات إنارة LED موفرة للطاقة بعمر افتراضي طويل. توفير يصل إلى 80% مقارنة بالإضاءة التقليدية.",
-                category: "الكهرباء والإنارة",
-                specs: "ألوان دافئة وباردة، قوة 5W - 100W، عمر 50,000 ساعة",
-                applications: "المنازل، المكاتب، المحلات التجارية، الشوارع",
-                quality: "عالية الكفاءة، مقاومة للاهتزاز",
-                price: "يبدأ من 30 ريال/وحدة",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            bond: {
+                title: "البوند",
+                description: "مادة بوند لتحسين التصاق المونة الأسمنتية. تزيد من متانة الطبقات اللاحقة.",
+                category: "المواد الأخرى",
+                specs: "سائل لاصق، خلط مع الأسمنت، تحسين الالتصاق",
+                applications: "اللياسة، البلاط، الطوب",
+                quality: "مقاوم للانكماش والتشقق",
+                price: "يبدأ من 60 ريال/جالون",
+                image: "./img/The-Bund.jpg"
             },
-            switches: {
-                title: "المفاتيح والمقابس",
-                description: "مفاتيح ومقابس كهربائية بتصاميم عصرية ومتانة عالية. تناسب جميع أنواع الديكورات الداخلية.",
-                category: "الكهرباء والإنارة",
-                specs: "تصاميم حديثة، ألوان متنوعة، نظام أمان متقدم",
-                applications: "الغرف، المطابخ، الحمامات، المكاتب",
-                quality: "مقاومة للحرارة والصدمات",
-                price: "يبدأ من 20 ريال/قطعة",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            filler_board: {
+                title: "الواح الفيلر بورد",
+                description: "ألواح فيلر بورد عالية الكثافة للأعمال الديكورية والتشطيبات الداخلية.",
+                category: "المواد الأخرى",
+                specs: "سمك 9-12 مم، مقاوم للرطوبة، سطح أملس",
+                applications: "الأسقف المعلقة، الجدران، التقسيمات",
+                quality: "سهلة القص والتركيب",
+                price: "يبدأ من 85 ريال/لوح",
+                image: "./img/Filler-board.webp"
             },
-            protection_systems: {
-                title: "أنظمة الحماية",
-                description: "أنظمة حماية كهربائية متكاملة لمنع الصعق الكهربائي والحرائق. تضمن السلامة الكاملة للمنشآت.",
-                category: "الكهرباء والإنارة",
-                specs: "منظمات جهد، مانعات صواعق، أنظمة إنذار",
-                applications: "المباني السكنية، المستشفيات، المصانع",
-                quality: "مطابقة لمعايير السلامة العالمية",
-                price: "يبدأ من 500 ريال/نظام",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-
-            // مواد البناء وعوازل الموقع
-            cement: {
-                title: "الأسمنت والجبس",
-                description: "أسمنت ومسحوق جبس عالي الجودة لجميع أعمال البناء والتشطيبات. يضمن متانة وسلامة الهياكل الإنشائية.",
-                category: "مواد البناء وعوازل الموقع",
-                specs: "أسمنت مقاوم للكبريتات، جبس خالص، تعبئة محكمة",
-                applications: "الخرسانة، المحارة، الديكورات الجبسية",
-                quality: "مطابق للمواصفات القياسية",
-                price: "يبدأ من 18 ريال/كيس",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            bricks: {
-                title: "الطوب والبلوك",
-                description: "طوب وبلوك بناء بجودة عالية ومقاسات متنوعة. مثالي لجميع أنواع الجدران والأسوار.",
-                category: "مواد البناء وعوازل الموقع",
-                specs: "أحجام قياسية، خفيف الوزن، عازل حراري",
-                applications: "الجدران الحاملة، الأسوار، التقسيمات",
-                quality: "مقاوم للرطوبة والحرائق",
-                price: "يبدأ من 1.5 ريال/قطعة",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            insulation: {
-                title: "العوازل المائية والحرارية",
-                description: "مواد عزل حراري ومائي عالية الكفاءة لحماية المباني من الرطوبة والحرارة. توفير يصل إلى 40% في فواتير الطاقة.",
-                category: "مواد البناء وعوازل الموقع",
-                specs: "عزل حراري وصوتي، مقاوم للماء، عمر طويل",
-                applications: "الأسقف، الجدران، الأساسات، الحمامات",
-                quality: "مقاوم للعفن والعوامل الجوية",
-                price: "يبدأ من 80 ريال/م²",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            tiles: {
-                title: "البلاط والسيراميك",
-                description: "بلاط وسيراميك بتصاميم وألوان متنوعة تناسب جميع الأذواق. سهلة التنظيف ومقاومة للخدوش.",
-                category: "مواد البناء وعوازل الموقع",
-                specs: "مقاسات متنوعة، سطح أملس، مقاوم للبقع",
-                applications: "الأرضيات، الجدران، المطابخ، الحمامات",
-                quality: "مقاوم للانزلاق والكسر",
-                price: "يبدأ من 60 ريال/م²",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            paint: {
-                title: "الدهانات والطلاء",
-                description: "دهانات وطلاء عالي الجودة بألوان متنوعة. مقاوم للعوامل الجوية وسهل التنظيف.",
-                category: "مواد البناء وعوازل الموقع",
-                specs: "ألوان متعددة، مقاوم للماء، خالي من الرصاص",
-                applications: "الجدران الداخلية والخارجية، الأسقف، الأبواب",
-                quality: "صديق للبيئة، سريع الجفاف",
-                price: "يبدأ من 90 ريال/جالون",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-
-            // السباكة والمياه
-            pvc_pipes: {
-                title: "مواسير PVC",
-                description: "مواسير PVC عالية الجودة لمشاريع السباكة والصرف الصحي. مقاومة للكسر والعوامل الكيميائية.",
-                category: "السباكة والمياه",
-                specs: "أقطار متنوعة (½ - 8 بوصات)، مقاومة للكسر",
-                applications: "شبكات الصرف، أنظمة الري، التهوية",
-                quality: "غير سامة، مقاومة للكيميائيات",
+            expansion_joint: {
+                title: "فاصل التمدد",
+                description: "فاصل تمدد مرن لمنع تشققات الخرسانة بسبب التمدد والانكماش الحراري.",
+                category: "المواد الأخرى",
+                specs: "أحجام متنوعة، مواد مرنة، مقاوم للتآكل",
+                applications: "الأرضيات الخرسانية، الجسور، الممرات",
+                quality: "مقاوم للعوامل الجوية",
                 price: "يبدأ من 40 ريال/متر",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                image: "./img/Expansion-separator.webp"
             },
-            faucets: {
-                title: "الخلاطات والحنفيات",
-                description: "خلاطات وحنفيات بتصاميم عصرية وموفرة للمياه. سهلة التركيب والصيانة.",
-                category: "السباكة والمياه",
-                specs: "تصاميم حديثة، توفير المياه، ألوان متنوعة",
-                applications: "المطابخ، الحمامات، المغاسل",
-                quality: "مقاومة للصدأ والتآكل",
-                price: "يبدأ من 150 ريال/قطعة",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            fiber_mesh: {
+                title: "شبك لياسة فايبر",
+                description: "شبك لياسة من الألياف الزجاجية لتقوية الطبقات ومنع التشققات.",
+                category: "المواد الأخرى",
+                specs: "مقاس شبكة 5×5 مم، مقاوم للقلوية، خفيف الوزن",
+                applications: "اللياسة الخارجية والداخلية، الإصلاحات",
+                quality: "زيادة المتانة بنسبة 30%",
+                price: "يبدأ من 35 ريال/م²",
+                image: "./img/Fiber-plastering-mesh.jpg"
             },
-            water_tanks: {
-                title: "خزانات المياه",
-                description: "خزانات مياه بمواد آمنة وسعات متنوعة. مثالية لتخزين المياه بشكل آمن ونظيف.",
-                category: "السباكة والمياه",
-                specs: "سعات من 500 إلى 5000 لتر، مواد آمنة",
-                applications: "المنازل، المباني، المشاريع",
-                quality: "مقاومة للأشعة فوق البنفسجية",
-                price: "يبدأ من 300 ريال/خزان",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            roll_mesh: {
+                title: "رول شبك لياسة",
+                description: "رول شبك لياسة سهل التركيب لتقوية الطبقات الأسمنتية.",
+                category: "المواد الأخرى",
+                specs: "عرض 1م، طول 50م، ثقيل التحمل",
+                applications: "اللياسة، الأرضيات، الأسقف",
+                quality: "مقاوم للشد والانحناء",
+                price: "يبدأ من 280 ريال/رول",
+                image: "./img/plastering-mesh-roll.jpeg"
             },
-            toilets: {
-                title: "المراحيض والأحواض",
-                description: "مراحيض وأحواض بتصاميم حديثة وموفرة للمياه. سهلة التنظيف ومقاومة للبقع.",
-                category: "السباكة والمياه",
-                specs: "تصاميم مدمجة، توفير المياه، ألوان بيضاء",
-                applications: "الحمامات، دورات المياه",
-                quality: "مقاومة للكسر والصدأ",
-                price: "يبدأ من 400 ريال/قطعة",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            saveto: {
+                title: "منتجات التشطيب سافيتو",
+                description: "مجموعة متكاملة من منتجات التشطيب سافيتو بجودة عالية وألوان متنوعة.",
+                category: "المواد الأخرى",
+                specs: "معجون، سيلر، دهانات، مواد لاصقة",
+                applications: "التشطيبات الداخلية، الديكورات، الإصلاحات",
+                quality: "سهلة التطبيق، نتائج ممتازة",
+                price: "يبدأ من 55 ريال/علبة",
+                image: "./img/saveto-2.png"
             },
-            water_pumps: {
-                title: "مضخات المياه",
-                description: "مضخات مياه قوية وموثوقة لرفع وتوزيع المياه. مناسبة للمنازل والمشاريع الزراعية.",
-                category: "السباكة والمياه",
-                specs: "قدرات متنوعة، ضغط عالي، استهلاك منخفض للطاقة",
-                applications: "المنازل، المزارع، المشاريع الصناعية",
-                quality: "هادئة، عمر افتراضي طويل",
-                price: "يبدأ من 800 ريال/مضخة",
-                image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            binding_wire: {
+                title: "سلك التربيط",
+                description: "سلك تربيط حديدي عالي الجودة لربط حديد التسليح.",
+                category: "المواد الأخرى",
+                specs: "سماكات 1.2-2.0 مم، لفائف 50 كجم، مطلي",
+                applications: "ربط حديد التسليح، أعمال الحدادة",
+                quality: "مقاوم للصدأ، مرن",
+                price: "يبدأ من 180 ريال/لفة",
+                image: "./img/Tie-wire.jpg"
             },
 
-            // العدد والأدوات
-            electric_tools: {
-                title: "الأدوات الكهربائية",
-                description: "مجموعة كاملة من الأدوات الكهربائية الاحترافية لأعمال البناء والتشطيبات.",
-                category: "العدد والأدوات",
-                specs: "قوة عالية، ضمان سنتين، بطاريات ليثيوم",
-                applications: "الحفر، القص، الطحن، التلميع",
-                quality: "علامات تجارية عالمية",
-                price: "يبدأ من 300 ريال/أداة",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            // قسم مواد البناء والتشطيب
+            cement_materials: {
+                title: "المواد الاسمنتية",
+                description: "مجموعة كاملة من المواد الاسمنتية بجميع أنواعها لجميع أعمال البناء.",
+                category: "قسم مواد البناء والتشطيب",
+                specs: "أسمنت، جبس، مواد لاصقة، معاجين",
+                applications: "البناء، التشطيبات، الإصلاحات",
+                quality: "مواصفات قياسية عالية",
+                price: "يبدأ من 20 ريال/كيس",
+                image: "./img/Cementitious-material.jpg"
             },
-            measurement_tools: {
-                title: "أدوات القياس",
-                description: "أدوات قياس دقيقة ومتعددة الاستخدامات لأعمال البناء والديكور.",
-                category: "العدد والأدوات",
-                specs: "قياسات دقيقة، مواد متينة، سهلة الاستخدام",
-                applications: "القياسات الهندسية، التخطيط، المراجعة",
-                quality: "دقة عالية، مقاومة للسقوط",
-                price: "يبدأ من 50 ريال/أداة",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            paints_finishes: {
+                title: "دهانات ومواد تشطيب",
+                description: "تشكيلة واسعة من الدهانات ومواد التشطيب بألوان وجودة متنوعة.",
+                category: "قسم مواد البناء والتشطيب",
+                specs: "دهانات داخلية وخارجية، مواد عازلة، ديكورات",
+                applications: "التشطيب النهائي، الديكورات، الصيانة",
+                quality: "صديقة للبيئة، سريعة الجفاف",
+                price: "يبدأ من 90 ريال/جالون",
+                image: "./img/Finishing-paints.jpg"
             },
-            hand_tools: {
-                title: "العدد اليدوية",
-                description: "مجموعة شاملة من العدد اليدوية عالية الجودة لجميع أعمال الصيانة والتركيب.",
-                category: "العدد والأدوات",
-                specs: "صلب كربوني، مقابض مريحة، أحجام متنوعة",
-                applications: "التركيبات، الإصلاحات، أعمال النجارة",
-                quality: "مقاومة للصدأ والتآكل",
-                price: "يبدأ من 20 ريال/قطعة",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            safety_equipment: {
-                title: "معدات السلامة",
-                description: "معدات سلامة متكاملة لحماية العمال والمستخدمين في مواقع البناء.",
-                category: "العدد والأدوات",
-                specs: "خوذات، نظارات، قفازات، أحذية",
-                applications: "مواقع البناء، المصانع، الورش",
-                quality: "مطابقة لمعايير السلامة",
-                price: "يبدأ من 100 ريال/قطعة",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-            },
-            ladders: {
-                title: "السلالم والسقالات",
-                description: "سلالم وسقالات آمنة ومتينة لأعمال الصيانة والبناء على الارتفاعات.",
-                category: "العدد والأدوات",
-                specs: "أطوال متنوعة، مواد خفيفة، نظام أمان",
-                applications: "أعمال الارتفاعات، الصيانة، التشطيبات",
-                quality: "مقاومة للانزلاق والاهتزاز",
-                price: "يبدأ من 200 ريال/سلم",
-                image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+            fosam: {
+                title: "جميع مواد فوسام",
+                description: "مجموعة متكاملة من منتجات فوسام للبناء والتشطيبات بجودة عالمية.",
+                category: "قسم مواد البناء والتشطيب",
+                specs: "جبس، معجون، مواد لاصقة، دهانات",
+                applications: "جميع مراحل البناء والتشطيب",
+                quality: "علامة تجارية معروفة",
+                price: "يبدأ من 30 ريال/كيس",
+                image: "./img/Fossam-materials.webp"
             }
         };
 
@@ -1737,34 +985,6 @@
             }
         });
 
-        // تحسين الأداء على الجوال - منع الازدواجية في النقر
-        let lastTap = 0;
-        productLinks.forEach(link => {
-            link.addEventListener('touchend', function (e) {
-                const currentTime = new Date().getTime();
-                const tapLength = currentTime - lastTap;
-                
-                if (tapLength < 500 && tapLength > 0) {
-                    // منع النقر المزدوج
-                    e.preventDefault();
-                }
-                lastTap = currentTime;
-            });
-        });
-
-        // إغلاق Lightbox عند تغيير اتجاه الشاشة
-        window.addEventListener('orientationchange', function() {
-            setTimeout(function() {
-                if (lightboxOverlay.classList.contains('active')) {
-                    // إعادة حساب أبعاد Lightbox
-                    const lightboxContainer = document.querySelector('.lightbox-container');
-                    if (lightboxContainer) {
-                        lightboxContainer.style.maxHeight = (window.innerHeight - 40) + 'px';
-                    }
-                }
-            }, 300);
-        });
-
         // Test all product links
         function testAllLinks() {
             const allProductIds = Object.keys(productsData);
@@ -1780,21 +1000,6 @@
 
         // Run test on load
         window.addEventListener('load', testAllLinks);
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    closeMobileMenuFunc();
-                }
-            });
-        });
     </script>
     <!-- Hero Section -->
     <div class="hero-final-wrapper">
