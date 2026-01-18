@@ -2208,6 +2208,103 @@
             </div>
         </div>
 
+                <!-- Section: قسم مواد الإصلاح -->
+<div class="mb-20">
+    <div class="flex items-center justify-between mb-10">
+        <div>
+            <h2 class="prod-carousel-section-title">قسم مواد الإصلاح</h2>
+            <p class="prod-carousel-section-desc">
+                قسم مواد الإصلاح يختص بتوفير حلول متكاملة لمعالجة عيوب المباني والخرسانة،
+                مثل الشقوق والتصدعات والتآكل، مع ضمان استعادة المتانة الإنشائية
+                وإطالة عمر المبنى.
+            </p>
+        </div>
+        <div class="flex gap-3">
+            <button class="prod-carousel-arrow" onclick="scrollCarousel('repair-section', -1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <button class="prod-carousel-arrow" onclick="scrollCarousel('repair-section', 1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="prod-carousel-container overflow-x-auto" id="repair-section">
+        <div class="flex gap-6 pb-4">
+
+            <!-- مواد إصلاح الشقوق والتصدعات -->
+            <div class="prod-carousel-item">
+                <div class="prod-carousel-card">
+                    <div class="image-container">
+                        <img src="./img/crack-repair.jfif" alt="مواد إصلاح الشقوق" class="prod-image">
+                        <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="content-container">
+                        <h3 class="product-title">إصلاح الشقوق والتصدعات</h3>
+                        <p class="product-description">
+                            مواد متخصصة لمعالجة شقوق الخرسانة وإيقاف تمددها
+                            مع ضمان قوة تماسك عالية.
+                        </p>
+                        <a href="tel:0568524590" class="prod-carousel-btn">
+                            <i class="fas fa-phone-alt ml-2"></i>
+                            اطلب المنتج
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- معالجة التسربات والرطوبة -->
+            <div class="prod-carousel-item">
+                <div class="prod-carousel-card">
+                    <div class="image-container">
+                        <img src="./img/waterproofing.jpg" alt="معالجة التسربات" class="prod-image">
+                        <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="content-container">
+                        <h3 class="product-title">معالجة التسربات والرطوبة</h3>
+                        <p class="product-description">
+                            حلول فعالة لعزل المياه ومعالجة الرطوبة
+                            وحماية المباني من التلف المستقبلي.
+                        </p>
+                        <a href="tel:0568524590" class="prod-carousel-btn">
+                            <i class="fas fa-phone-alt ml-2"></i>
+                            اطلب المنتج
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- تقوية وإعادة تأهيل الخرسانة -->
+            <div class="prod-carousel-item">
+                <div class="prod-carousel-card">
+                    <div class="image-container">
+                        <img src="./img/concrete-strengthening.png" alt="تقوية الخرسانة" class="prod-image">
+                        <button class="prod-carousel-heart" onclick="toggleHeart(this)">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="content-container">
+                        <h3 class="product-title">تقوية وإعادة تأهيل الخرسانة</h3>
+                        <p class="product-description">
+                            مواد متقدمة لإعادة تأهيل المنشآت
+                            وزيادة التحمل والمتانة الإنشائية.
+                        </p>
+                        <a href="tel:0568524590" class="prod-carousel-btn">
+                            <i class="fas fa-phone-alt ml-2"></i>
+                            اطلب المنتج
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
         <!-- Section 2: المواد الأخرى -->
         <div class="mb-20">
             <div class="flex items-center justify-between mb-10">
@@ -2545,6 +2642,9 @@
                 </div>
             </div>
         </div>
+
+
+
     </div>
 
     <script>
@@ -4018,7 +4118,14 @@
                         <li><a href="#about"><i class="fas fa-chevron-left"></i> عن المؤسسة</a></li>
                         <li><a href="#Services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
                         <li><a href="#Our-products"><i class="fas fa-chevron-left"></i> منتجاتنا</a></li>
-                        <li><a href="tel:0568524590"><i class="fas fa-chevron-left"></i> اتصل بنا</a></li>
+                      <li>
+                        <a href="./img/company-profile.pdf" download
+                            class="flex items-center gap-2">
+                            <i class="fas fa-file-pdf text-red-600"></i>
+                            بروفايل الشركة
+                        </a>
+                    </li>
+
                     </ul>
                 </div>
 
@@ -4030,6 +4137,7 @@
                         <li><a href="#Our-products"><i class="fas fa-tint"></i> مواد العزل</a></li>
                     
                         <li><a href="#Our-products"><i class="fas fa-paint-roller"></i> مواد الدهانات</a></li>
+                        <li><a href="#Our-products"><i class="fas fa-paint-roller"></i> مواد الاصلاح</a></li>
                     </ul>
                 </div>
 
